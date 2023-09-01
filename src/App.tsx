@@ -7,7 +7,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-
 function App() {
   useEffect(() => {
     AOS.init({
@@ -18,15 +17,20 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Menu />
-      <Routes>
-        <Route path='' element={<HomePage />} />
-        <Route path='/projects' element={<Projects />} />
-        {/* <Route path='/interests' element={<Interests />} /> */}
-        {/* <Route path='/about' element={<About />} /> */}
-      </Routes>
-    </Router>
+    <div style={{
+      minHeight: '100vh',
+      minWidth: '100vw',
+    }}>
+      <Router>
+        <Menu />
+        <Routes>
+          <Route path='' element={<HomePage />} />
+          <Route path='/projects' element={<Projects />} />
+          {/* <Route path='/interests' element={<Interests />} /> */}
+          {/* <Route path='/about' element={<About />} /> */}
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

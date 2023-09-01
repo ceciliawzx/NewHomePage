@@ -8,9 +8,9 @@ export const HomePage = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '100vh',
-        backgroundImage: 'url("home-bg.png")',
+        backgroundImage: 'url("bg2.png")',
         backgroundSize: 'cover',
+        minHeight: '100vh',
       }}
     >
       <Profile />
@@ -57,6 +57,8 @@ const ProfileImg = () => {
         borderRadius: '50%',
         overflow: 'hidden',
       }}
+      data-aos="zoom-in"
+      data-aos-duration='500'
     >
       <img src='catImg1.jpg' style={{ height: '100%', width: 'auto' }} />
     </div>

@@ -1,13 +1,6 @@
 import React from 'react';
-import { project } from '../util/types';
-
-const projects: project[] = [
-  {
-    title: 'Pintos',
-    description: '',
-    imgLink: ''
-  }
-]
+import { Project } from '../util/types';
+import { projects } from '../util/data';
 
 export const Projects = () => {
   return (
@@ -16,7 +9,7 @@ export const Projects = () => {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignContent: 'center',
         backgroundImage: 'url("home-bg.png")',
         backgroundSize: 'cover',
       }}
@@ -34,58 +27,46 @@ const ProjectsContainer = () => {
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
+        alignContent: 'center',
+        margin: '40px',
       }}
     >
-      <ProjectCard description='pintos' imgPath='catImg1.jpg' />
-      <ProjectCard description='pintos' imgPath='catImg1.jpg' />
-      <ProjectCard description='pintos' imgPath='catImg1.jpg' />
-      <ProjectCard description='pintos' imgPath='catImg1.jpg' />
-      <ProjectCard description='pintos' imgPath='catImg1.jpg' />
-      <ProjectCard description='pintos' imgPath='catImg1.jpg' />
+      {projects.map((project, i) => (
+        <ProjectCard project={project} />
+      ))}
     </div>
   );
 };
 
-const ProjectCard = ({
-  description,
-  imgPath,
-}: {
-  description: string;
-  imgPath: string;
-}) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
       style={{
-        height: '500px',
-        width: '400px',
+        height: '700px',
+        width: '350px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
         alignContent: 'center'
       }}
     >
-      <Project description={description} imgPath={imgPath} />
-    </div>
-  );
-};
-
-const Project = ({
-  description,
-  imgPath,
-}: {
-  description: string;
-  imgPath: string;
-}) => {
-  return (
-    <div data-aos="fade-up">
-    <div style={{ display: 'flex', justifyContent: 'center' }} >
-      <img
-        src={imgPath}
-        style={{ height: '350px', width: '300px', objectFit: 'cover' }}
-      />
-    </div>
-      <div style={{ textAlign: 'center' }}>
-        <p style={{ color: 'white', fontSize: '17px' }}>{description}</p>
+      <div data-aos='fade-up'>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <img
+            src={project.imgLink}
+            style={{ height: '350px', width: '300px', objectFit: 'cover' }}
+          />
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ color: 'white', fontSize: '20px' }}>{project.title}</p>
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ color: 'white', fontSize: '15px' }}>{project.time}</p>
+        </div>
+        <div>
+          <p style={{ color: 'white', fontSize: '17px' }}>
+            {project.description}
+          </p>
+        </div>
       </div>
     </div>
   );
