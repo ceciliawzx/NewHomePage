@@ -17,15 +17,17 @@ function App() {
   }, []);
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      minWidth: '100vw',
-    }}>
+    <div
+      style={{
+        minHeight: '100vh',
+        minWidth: '100vw',
+      }}
+    >
       <Router>
         <Menu />
         <Routes>
-          <Route path='/~zw4021/' element={<HomePage />} />
-          <Route path='/~zw4021/projects' element={<Projects />} />
+          <Route path='url("/")' element={<HomePage />} />
+          <Route path='url("/projects")' element={<Projects />} />
         </Routes>
       </Router>
     </div>
