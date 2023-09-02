@@ -26,8 +26,8 @@ function App() {
       <Router>
         <Menu />
         <Routes>
-          <Route path='%PUBLIC_URL%/~zw4021/' element={<HomePage />} />
-          <Route path='%PUBLIC_URL%/~zw4021/projects' element={<Projects />} />
+          <Route path='/~zw4021/' element={<HomePage />} />
+          <Route path='/~zw4021/projects' element={<Projects />} />
         </Routes>
       </Router>
     </div>

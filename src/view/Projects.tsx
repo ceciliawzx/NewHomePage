@@ -39,13 +39,9 @@ const ProjectsContainer = () => {
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div
-      className='project-card'
-    >
+    <div className='project-card'>
       <div data-aos='fade-up'>
-        <div
-          style={{ display: 'flex', justifyContent: 'center' }}
-        >
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <img
             className='project-img'
             src={project.imgLink}

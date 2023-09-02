@@ -26,7 +26,7 @@ const MenuBar = () => {
       role='navigation'
       style={{
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
     >
       <MenuItems />
@@ -36,33 +36,33 @@ const MenuBar = () => {
 
 const MenuItems = () => {
   return (
-      <ul
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          listStyleType: 'none',
-          paddingInlineStart: '0',
-          rowGap: '15px',
-        }}
-      >
-        {menuItems.map((item, i) => {
-          return (
-            <li
-              key={`menu-item-${i}`}
-              style={{
-                color: 'white',
-                fontSize: '20px',
-              }}
+    <ul
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        listStyleType: 'none',
+        paddingInlineStart: '0',
+        rowGap: '15px',
+      }}
+    >
+      {menuItems.map((item, i) => {
+        return (
+          <li
+            key={`menu-item-${i}`}
+            style={{
+              color: 'white',
+              fontSize: '20px',
+            }}
+          >
+            <Link
+              to={item.pageLink}
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
-              <Link
-                to={item.pageLink}
-                style={{ textDecoration: 'none', color: 'inherit' }}
-              >
-                {item.text}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+              {item.text}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 };

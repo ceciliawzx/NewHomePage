@@ -37,10 +37,11 @@ const Profile = () => {
 
 const ProfileImg = () => {
   return (
-    <div
-      id='profile-img'
-    >
-      <img src='%PUBLIC_URL%/~zw4021/catImg1.JPG' style={{ height: '100%', width: 'auto' }} />
+    <div id='profile-img'>
+      <img
+        src='/~zw4021/catImg1.JPG'
+        style={{ height: '100%', width: 'auto' }}
+      />
     </div>
   );
 };
