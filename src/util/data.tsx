@@ -3,19 +3,19 @@ import { Project, Technology, MenuItem } from '../util/types';
 export const menuItems: MenuItem[] = [
   {
     text: 'HOME',
-    pageLink: '',
+    pageLink: '/~zw4021/',
   },
   {
     text: 'PROJECTS',
-    pageLink: '/projects',
+    pageLink: '/~zw4021/projects',
   },
   {
     text: 'INTERESTS',
-    pageLink: '/interests',
+    pageLink: '/~zw4021/interests',
   },
   {
     text: 'CONTACT',
-    pageLink: '/contact',
+    pageLink: '/~zw4021/contact',
   },
 ];
 
