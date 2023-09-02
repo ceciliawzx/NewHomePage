@@ -20,13 +20,14 @@ export const Projects = () => {
 const ProjectsContainer = () => {
   return (
     <div
+    id='project-container'
       style={{
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         alignContent: 'center',
-        margin: '40px',
+        margin: '10% 5%',
       }}
     >
       {projects.map((project, i) => (
@@ -39,6 +40,7 @@ const ProjectsContainer = () => {
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
+    className='project-card'
       style={{
         height: '700px',
         width: '350px',

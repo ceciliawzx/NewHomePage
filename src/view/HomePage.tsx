@@ -20,15 +20,8 @@ const Profile = () => {
   return (
     <div
       id='profile-container'
-      style={{
-        height: '600px',
-        width: '80%',
-        margin: '100px 0 0 0',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
+      data-aos='fade-up'
+      data-aos-duration='500'
     >
       <ProfileImg />
       <div style={{ textAlign: 'center' }}>
@@ -55,8 +48,6 @@ const ProfileImg = () => {
         borderRadius: '50%',
         overflow: 'hidden',
       }}
-      data-aos="zoom-in"
-      data-aos-duration='500'
     >
       <img src='catImg1.jpg' style={{ height: '100%', width: 'auto' }} />
     </div>
