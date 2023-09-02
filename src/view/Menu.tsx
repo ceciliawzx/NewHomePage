@@ -26,6 +26,10 @@ const MenuBar = () => {
     <nav
       id='menu-nav'
       role='navigation'
+      style={{
+        display: 'flex',
+        alignItems: 'center'
+      }}
     >
       <MenuItems />
     </nav>
@@ -41,7 +45,6 @@ const MenuItems = () => {
           listStyleType: 'none',
           paddingInlineStart: '0',
           rowGap: '15px',
-          marginTop: '250px',
         }}
       >
         {menuItems.map((item, i) => {
