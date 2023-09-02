@@ -40,7 +40,7 @@ const ProfileImg = () => {
     <div
       id='profile-img'
     >
-      <img src='%PUBLIC_URL%/catImg1.JPG' style={{ height: '100%', width: 'auto' }} />
+      <img src='%PUBLIC_URL%/~zw4021/catImg1.JPG' style={{ height: '100%', width: 'auto' }} />
     </div>
   );
 };
