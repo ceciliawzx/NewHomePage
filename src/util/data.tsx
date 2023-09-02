@@ -34,7 +34,7 @@ export const projects: Project[] = [
     Our objectives was to strengthen these areas and add a virtual memory implementation. 
     We faced challenges like concurrency, memory leak and data structure design, 
     but also learned a lot about C language and the overall operating system.`,
-    imgLink: 'url("pintos.jpg")',
+    imgLink: '%PUBLIC_URL%/pintos.jpg',
   },
   {
     title: 'WACC',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     We faced challenges of learning and applying new language, 
     and registers/stack management, 
     but gained comprehensive understanding of compilers.`,
-    imgLink: 'url("wacc.jpg")',
+    imgLink: '%PUBLIC_URL%/wacc.jpg',
   },
   {
     title: 'DRP',
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       based on users feedback. It was a relatively short project, 
       but we were able to learn the process of delivering a product from the very beginning, 
       and also learned about the differences between school knowledge and designing for the real-world. `,
-    imgLink: 'url("drp.png")',
+    imgLink: '%PUBLIC_URL%/drp.png',
   },
   
 ];

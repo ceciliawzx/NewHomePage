@@ -10,7 +10,6 @@ export const Menu = () => {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        // backgroundImage: 'url("menu-bg.jpeg")',
         backgroundColor: 'black',
         textAlign: 'center',
       }}

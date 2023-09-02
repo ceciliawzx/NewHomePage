@@ -26,8 +26,8 @@ function App() {
       <Router>
         <Menu />
         <Routes>
-          <Route path='url("/")' element={<HomePage />} />
-          <Route path='url("/projects")' element={<Projects />} />
+          <Route path='%PUBLIC_URL%/' element={<HomePage />} />
+          <Route path='%PUBLIC_URL%/projects' element={<Projects />} />
         </Routes>
       </Router>
     </div>
