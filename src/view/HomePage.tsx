@@ -1,16 +1,14 @@
 import React from 'react';
+import '../css/style.css';
 
 export const HomePage = () => {
   return (
     <div
-      id='homepage-main'
+      className='window-main'
       style={{
-        display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         backgroundImage: 'url("bg2.png")',
-        backgroundSize: 'cover',
-        minHeight: '100vh',
       }}
     >
       <Profile />

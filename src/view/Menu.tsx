@@ -1,22 +1,18 @@
 import React from 'react';
 import { MenuItem } from '../util/types';
 import { Link } from 'react-router-dom';
+import '../css/style.css';
 
 export const Menu = () => {
   return (
     <aside
-      id='menu'
+      id='side-menu'
       role='complementary'
       style={{
         display: 'flex',
-        flexDirection: 'row',
         justifyContent: 'center',
         backgroundColor: 'lightcyan',
-        float: 'left',
         textAlign: 'center',
-        width: '25%',
-        height: '100%',
-        overflowY: 'auto'
       }}
     >
       <Nav />
@@ -45,12 +41,34 @@ const Nav = () => {
   ];
 
   return (
-    <nav id='menu-nav' role='navigation' style={{ display: 'flex'}}>
-      <ul style={{ listStyleType: 'none' }}>
+    <nav
+      id='menu-nav'
+      role='navigation'
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignContent: 'center',
+        textAlign: 'center',
+        alignItems: 'center', // ?
+      }}
+    >
+      <ul
+        style={{
+          listStyleType: 'none',
+          textAlign: 'center',
+          alignItems: 'center',
+          paddingInlineStart: '0',
+        }}
+      >
         {items.map((item, i) => {
           return (
-            <li id={`menu-item-${i}`}>
-              <Link to={item.pageLink}>{item.text}</Link>
+            <li key={`menu-item-${i}`}>
+              <Link
+                to={item.pageLink}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                {item.text}
+              </Link>
             </li>
           );
         })}

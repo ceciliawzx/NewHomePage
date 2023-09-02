@@ -5,13 +5,11 @@ import { projects } from '../util/data';
 export const Projects = () => {
   return (
     <div
-      id='projects-main'
+      className='window-main'
       style={{
-        display: 'flex',
         flexDirection: 'column',
         alignContent: 'center',
         backgroundImage: 'url("home-bg.png")',
-        backgroundSize: 'cover',
       }}
     >
       <ProjectsContainer />
@@ -46,7 +44,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         width: '350px',
         display: 'flex',
         flexDirection: 'column',
-        alignContent: 'center'
+        alignContent: 'center',
       }}
     >
       <div data-aos='fade-up'>
