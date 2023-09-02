@@ -5,6 +5,30 @@
   float: right;
   width: 75%;
   background-size: cover;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media (min-width: 992px) {
+  #colorlib-main {
+    width: 75%;
+  }
+}
+
+.project-card {
+  height: 700px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.project-img {
+  overflow: hidden;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px #000;
 }
 
 #side-menu {
@@ -27,4 +51,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#profile-img {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 0 0 20px #eee, /* outer white */ -5px 0 50px #f20,
+    /* outer left magenta */ 5px 0 50px #0df; /* outer right cyan */
 }

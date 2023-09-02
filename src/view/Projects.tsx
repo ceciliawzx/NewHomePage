@@ -20,7 +20,7 @@ export const Projects = () => {
 const ProjectsContainer = () => {
   return (
     <div
-    id='project-container'
+      id='project-container'
       style={{
         display: 'flex',
         flexDirection: 'row',
@@ -40,18 +40,14 @@ const ProjectsContainer = () => {
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
-    className='project-card'
-      style={{
-        height: '700px',
-        width: '350px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignContent: 'center',
-      }}
+      className='project-card'
     >
       <div data-aos='fade-up'>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
           <img
+            className='project-img'
             src={project.imgLink}
             style={{ height: '350px', width: '300px', objectFit: 'cover' }}
           />

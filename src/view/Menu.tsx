@@ -1,7 +1,7 @@
 import React from 'react';
-import { MenuItem } from '../util/types';
 import { Link } from 'react-router-dom';
 import '../css/style.css';
+import { menuItems } from '../util/data';
 
 export const Menu = () => {
   return (
@@ -11,58 +11,48 @@ export const Menu = () => {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        backgroundColor: 'lightcyan',
+        // backgroundImage: 'url("menu-bg.jpeg")',
+        backgroundColor: 'black',
         textAlign: 'center',
       }}
     >
-      <Nav />
+      <MenuBar />
     </aside>
   );
 };
 
-const Nav = () => {
-  const items: MenuItem[] = [
-    {
-      text: 'HOME',
-      pageLink: '',
-    },
-    {
-      text: 'PROJECTS',
-      pageLink: '/projects',
-    },
-    {
-      text: 'INTERESTS',
-      pageLink: '/interests',
-    },
-    {
-      text: 'CONTACT',
-      pageLink: '/contact',
-    },
-  ];
-
+const MenuBar = () => {
   return (
     <nav
       id='menu-nav'
       role='navigation'
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignContent: 'center',
-        textAlign: 'center',
-        alignItems: 'center', // ?
-      }}
     >
+      <MenuItems />
+    </nav>
+  );
+};
+
+const MenuItems = () => {
+  return (
       <ul
         style={{
+          display: 'flex',
+          flexDirection: 'column',
           listStyleType: 'none',
-          textAlign: 'center',
-          alignItems: 'center',
           paddingInlineStart: '0',
+          rowGap: '15px',
+          marginTop: '250px',
         }}
       >
-        {items.map((item, i) => {
+        {menuItems.map((item, i) => {
           return (
-            <li key={`menu-item-${i}`}>
+            <li
+              key={`menu-item-${i}`}
+              style={{
+                color: 'white',
+                fontSize: '20px',
+              }}
+            >
               <Link
                 to={item.pageLink}
                 style={{ textDecoration: 'none', color: 'inherit' }}
@@ -73,6 +63,5 @@ const Nav = () => {
           );
         })}
       </ul>
-    </nav>
   );
 };
