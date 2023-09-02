@@ -7,7 +7,6 @@ export const Menu = () => {
   return (
     <aside
       id='side-menu'
-      role='complementary'
       style={{
         display: 'flex',
         justifyContent: 'center',
