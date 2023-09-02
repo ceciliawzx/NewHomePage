@@ -24,7 +24,7 @@ function App() {
       <Router>
         <Menu />
         <Routes>
-          <Route path='' element={<HomePage />} />
+          <Route path='/' element={<HomePage />} />
           <Route path='/projects' element={<Projects />} />
         </Routes>
       </Router>
