@@ -3,19 +3,19 @@ import { Project, Technology, MenuItem } from '../util/types';
 export const menuItems: MenuItem[] = [
   {
     text: 'HOME',
-    pageLink: '/~zw4021/',
+    pageLink: '/',
   },
   {
     text: 'PROJECTS',
-    pageLink: '/~zw4021/projects',
+    pageLink: '/projects',
   },
   {
     text: 'INTERESTS',
-    pageLink: '/~zw4021/interests',
+    pageLink: '/interests',
   },
   {
     text: 'CONTACT',
-    pageLink: '/~zw4021/contact',
+    pageLink: '/contact',
   },
 ];
 
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     Our objectives was to strengthen these areas and add a virtual memory implementation. 
     We faced challenges like concurrency, memory leak and data structure design, 
     but also learned a lot about C language and the overall operating system.`,
-    imgLink: '/~zw4021/pintos.jpg',
+    imgLink: '/pintos.jpg',
   },
   {
     title: 'WACC',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     We faced challenges of learning and applying new language, 
     and registers/stack management, 
     but gained comprehensive understanding of compilers.`,
-    imgLink: '/~zw4021/wacc.jpg',
+    imgLink: '/wacc.jpg',
   },
   {
     title: 'DRP',
@@ -70,6 +70,6 @@ export const projects: Project[] = [
       based on users feedback. It was a relatively short project, 
       but we were able to learn the process of delivering a product from the very beginning, 
       and also learned about the differences between school knowledge and designing for the real-world. `,
-    imgLink: '/~zw4021/drp.png',
+    imgLink: '/drp.png',
   },
 ];
