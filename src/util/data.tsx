@@ -1,4 +1,4 @@
-import { Project, Technology, MenuItem } from '../util/types';
+import { Project, Technology, MenuItem, Interest } from '../util/types';
 
 export const menuItems: MenuItem[] = [
   {
@@ -73,3 +73,26 @@ export const projects: Project[] = [
     imgLink: '/drp.png',
   },
 ];
+
+export const interests: Interest[] = [
+  {
+    title: 'Violin',
+    description: 'Yes I love violin',
+    imgLink: 'bg2.png'
+  },
+  {
+    title: 'Cats',
+    description: 'Yes I love cats',
+    imgLink: 'bg3.png'
+  },
+  {
+    title: 'Musicals',
+    description: 'Yes I love musicals',
+    imgLink: 'bg4.png'
+  },
+  {
+    title: 'Musicals',
+    description: 'Yes I love musicals',
+    imgLink: 'bg5.png'
+  },
+]

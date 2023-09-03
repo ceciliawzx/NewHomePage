@@ -3,6 +3,7 @@ import './App.css';
 import { Menu } from './view/Menu';
 import { HomePage } from './view/HomePage';
 import { Projects } from './view/Projects';
+import { Interests } from './view/Interests';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/interests' element={<Interests />} />
         </Routes>
       </Router>
     </div>

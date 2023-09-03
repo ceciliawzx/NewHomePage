@@ -12,6 +12,12 @@ export type Project = {
   imgLink: string;
 };
 
+export type Interest = {
+  title: string;
+  description?: string;
+  imgLink: string;
+}
+
 export enum Technology {
   Java = 'Java',
   Kotlin = 'Kotlin',
