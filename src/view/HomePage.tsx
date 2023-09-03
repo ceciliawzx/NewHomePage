@@ -8,6 +8,7 @@ export const HomePage = () => {
       style={{
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
         backgroundImage: 'url("bg5.png")',
       }}
     >

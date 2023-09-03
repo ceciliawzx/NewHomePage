@@ -20,12 +20,18 @@
 .project-card {
   height: 700px;
   width: 350px;
+  min-height: 600px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-content: center;
+  color: white;
 }
 
 .project-img {
+  height: 350px;
+  width: 85%;
+  object-fit: cover;
   overflow: hidden;
   border-radius: 5%;
   box-shadow: 5px 5px 10px #000;
@@ -44,9 +50,7 @@
 }
 
 #profile-container {
-  height: 600px;
   width: 80%;
-  margin: 100px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,10 +60,14 @@
 #profile-img {
   height: 200px;
   width: 200px;
+  min-height: 100px;
+  min-width: 100px;
   overflow: hidden;
   position: relative;
   border-radius: 50%;
   margin: 20px;
-  box-shadow: 0 0 20px #eee, /* outer white */ -5px 0 50px #f20,
-    /* outer left magenta */ 5px 0 50px #0df; /* outer right cyan */
+  box-shadow: 
+  0 0 20px #eee, /* outer white */ 
+  -5px 0 50px #f20, /* outer left magenta */ 
+  5px 0 50px #0df; /* outer right cyan */
 }
