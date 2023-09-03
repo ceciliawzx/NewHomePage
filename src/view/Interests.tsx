@@ -23,7 +23,7 @@ const Slides = ({ interests }: { interests: Interest[] }) => {
   };
 
   useEffect(() => {
-    const timer = setInterval(goToNextImg, 4000);
+    const timer = setInterval(goToNextImg, 8000);
 
     return () => {
       clearInterval(timer);
