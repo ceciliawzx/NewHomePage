@@ -17,25 +17,6 @@
   }
 }
 
-.project-card {
-  height: 700px;
-  width: 350px;
-  min-height: 600px;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  color: white;
-}
-
-.project-img {
-  height: 350px;
-  width: 85%;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 5%;
-  box-shadow: 5px 5px 10px #000;
-}
 
 #side-menu {
   display: flex;

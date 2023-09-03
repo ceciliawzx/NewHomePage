@@ -27,6 +27,8 @@ const MenuBar = () => {
       style={{
         display: 'flex',
         alignItems: 'center',
+        width: '100%',
+        justifyContent: 'center',
       }}
     >
       <MenuItems />
@@ -43,6 +45,9 @@ const MenuItems = () => {
         listStyleType: 'none',
         paddingInlineStart: '0',
         rowGap: '15px',
+        width: '100%',
+        height: '80%',
+        justifyContent: 'center',
       }}
     >
       {menuItems.map((item, i) => {
@@ -51,7 +56,9 @@ const MenuItems = () => {
             key={`menu-item-${i}`}
             style={{
               color: 'white',
-              fontSize: '20px',
+              fontSize: '1em',
+              lineHeight: '20%',
+              height: '10%'
             }}
           >
             <Link

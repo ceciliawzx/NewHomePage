@@ -7,22 +7,43 @@
 }
 
 .technologies-container {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    column-gap: 5px;
-    padding: 0;
-    margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  column-gap: 5px;
+  padding: 0;
+  margin: 0;
 }
 
 #project-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    margin: 10% 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  margin: 10% 5%;
+}
+
+.project-card {
+  height: 700px;
+  width: 350px;
+  min-height: 600px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color: white;
+  margin-bottom: 10%;
+}
+
+.project-img {
+  height: 350px;
+  width: 85%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px #000;
 }
