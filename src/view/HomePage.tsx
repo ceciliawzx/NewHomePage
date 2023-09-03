@@ -39,7 +39,7 @@ const ProfileImg = () => {
   return (
     <div id='profile-img'>
       <img
-        src='/~zw4021/catImg1.JPG'
+        src='catImg1.JPG'
         style={{ height: '100%', width: 'auto' }}
       />
     </div>
