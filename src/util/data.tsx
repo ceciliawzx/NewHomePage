@@ -3,19 +3,19 @@ import { Project, Technology, MenuItem, Interest } from '../util/types';
 export const menuItems: MenuItem[] = [
   {
     text: 'HOME',
-    pageLink: '/',
+    pageLink: '/~zw4021/',
   },
   {
     text: 'PROJECTS',
-    pageLink: '/projects',
+    pageLink: '/~zw4021//projects',
   },
   {
     text: 'INTERESTS',
-    pageLink: '/interests',
+    pageLink: '/~zw4021//interests',
   },
   {
     text: 'CONTACT',
-    pageLink: '/contact',
+    pageLink: '/~zw4021//contact',
   },
 ];
 
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     Our objectives was to strengthen these areas and add a virtual memory implementation. 
     We faced challenges like concurrency, memory leak and data structure design, 
     but also learned a lot about C language and the overall operating system.`,
-    imgLink: '/pintos.jpg',
+    imgLink: '/~zw4021//pintos.jpg',
   },
   {
     title: 'WACC',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     We faced challenges of learning and applying new language, 
     and registers/stack management, 
     but gained comprehensive understanding of compilers.`,
-    imgLink: '/wacc.jpg',
+    imgLink: '/~zw4021//wacc.jpg',
   },
   {
     title: 'DRP',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       based on users feedback. It was a relatively short project, 
       but we were able to learn the process of delivering a product from the very beginning, 
       and also learned about the differences between school knowledge and designing for the real-world. `,
-    imgLink: '/drp.png',
+    imgLink: '/~zw4021//drp.png',
   },
 ];
 
@@ -78,21 +78,21 @@ export const interests: Interest[] = [
   {
     title: 'Violin',
     description: 'Yes I love violin',
-    imgLink: 'bg2.png'
+    imgLink: '/~zw4021/bg2.png'
   },
   {
     title: 'Cats',
     description: 'Yes I love cats',
-    imgLink: 'bg3.png'
+    imgLink: '/~zw4021/bg3.png'
   },
   {
     title: 'Musicals',
     description: 'Yes I love musicals',
-    imgLink: 'bg4.png'
+    imgLink: '/~zw4021/bg4.png'
   },
   {
     title: 'Musicals',
     description: 'Yes I love musicals',
-    imgLink: 'bg5.png'
+    imgLink: '/~zw4021/bg5.png'
   },
 ]
