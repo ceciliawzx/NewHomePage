@@ -1,9 +1,11 @@
 .window-main {
   display: flex;
   min-height: 100vh;
-  position: relative;
+  position: absolute;
   float: right;
   width: 75%;
+  top: 0;
+  right: 0;
   background-size: cover;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

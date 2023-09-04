@@ -1,0 +1,37 @@
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1em;
+  line-height: 20%;
+  height: 10%;
+  text-decoration: none; 
+}
+
+.menu-item-elem {
+  text-decoration: none; 
+  color: inherit;
+  position: relative;
+}
+
+.menu-item-elem::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 0;
+  top: 12px;
+  height: 2px;
+  background-color: white;
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-item-elem:hover::after {
+  width: 100%;
+}
+
+.menu-item-elem.active::after {
+  background-color: rgb(167 157 243);
+  width: 100%;
+}

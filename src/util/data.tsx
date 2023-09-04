@@ -1,4 +1,10 @@
-import { Project, Technology, MenuItem, Interest } from '../util/types';
+import {
+  Project,
+  Technology,
+  MenuItem,
+  Interest,
+  SocialMedia,
+} from '../util/types';
 
 export const menuItems: MenuItem[] = [
   {
@@ -78,21 +84,36 @@ export const interests: Interest[] = [
   {
     title: 'Violin',
     description: 'Yes I love violin',
-    imgLink: '/~zw4021/bg2.png'
+    imgLink: '/~zw4021/bg2.png',
   },
   {
     title: 'Cats',
     description: 'Yes I love cats',
-    imgLink: '/~zw4021/bg3.png'
+    imgLink: '/~zw4021/bg3.png',
   },
   {
     title: 'Musicals',
     description: 'Yes I love musicals',
-    imgLink: '/~zw4021/bg4.png'
+    imgLink: '/~zw4021/bg4.png',
   },
   {
     title: 'Musicals',
     description: 'Yes I love musicals',
-    imgLink: '/~zw4021/bg5.png'
+    imgLink: '/~zw4021/bg5.png',
   },
-]
+];
+
+export const socialMedias: SocialMedia[] = [
+  {
+    data: 'ceciliawzx@qq.com',
+    imgLink: '',
+  },
+  {
+    data: 'wechat',
+    imgLink: ''
+  },
+  {
+    data: 'sth else',
+    imgLink: ''
+  }
+];

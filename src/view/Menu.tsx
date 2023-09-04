@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/style.css';
 import { menuItems } from '../util/data';
+import '../css/menu.css';
 
 export const Menu = () => {
   return (
@@ -37,6 +38,8 @@ const MenuBar = () => {
 };
 
 const MenuItems = () => {
+  const [activePage, setActivePage] = useState('/~zw4021/');
+
   return (
     <ul
       style={{
@@ -54,16 +57,17 @@ const MenuItems = () => {
         return (
           <li
             key={`menu-item-${i}`}
-            style={{
-              color: 'white',
-              fontSize: '1em',
-              lineHeight: '20%',
-              height: '10%'
-            }}
+            className='menu-item'
+            onClick={() => setActivePage(item.pageLink)}
           >
             <Link
+              className={`menu-item-elem${
+                activePage === item.pageLink ? ' active' : ''
+              }`}
               to={item.pageLink}
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              style={{
+                color: `${activePage === item.pageLink ? 'rgb(167 157 243)' : 'inherit'}`
+              }}
             >
               {item.text}
             </Link>

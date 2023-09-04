@@ -19,9 +19,9 @@ export const HomePage = () => {
 
 const Profile = () => {
   return (
-    <div id='profile-container' data-aos='fade-up' data-aos-duration='500'>
+    <div id='profile-container'>
       <ProfileImg />
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center' }} data-aos='fade-up'>
         <h2 style={{ color: 'white' }}>Hello I'm</h2>
         <h1 style={{ color: 'white' }}>Zixi Wang</h1>
         <p style={{ color: 'white', fontSize: '17px' }}>
@@ -38,11 +38,8 @@ const Profile = () => {
 
 const ProfileImg = () => {
   return (
-    <div id='profile-img'>
-      <img
-        src='catImg1.JPG'
-        style={{ height: '100%', width: 'auto' }}
-      />
+    <div id='profile-img' data-aos='fade-down'>
+      <img src='catImg1.JPG' style={{ height: '100%', width: 'auto' }} />
     </div>
   );
 };

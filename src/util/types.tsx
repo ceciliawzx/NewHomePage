@@ -16,7 +16,12 @@ export type Interest = {
   title: string;
   description?: string;
   imgLink: string;
-}
+};
+
+export type SocialMedia = {
+  data: string;
+  imgLink: string;
+};
 
 export enum Technology {
   Java = 'Java',
