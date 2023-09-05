@@ -1,0 +1,9 @@
+.form-control {
+    width: 100%;
+    min-width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: medium;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
