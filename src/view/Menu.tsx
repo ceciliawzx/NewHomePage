@@ -58,7 +58,6 @@ const MenuItems = () => {
           <li
             key={`menu-item-${i}`}
             className='menu-item'
-            onClick={() => setActivePage(item.pageLink)}
           >
             <Link
               className={`menu-item-elem${
@@ -68,6 +67,7 @@ const MenuItems = () => {
               style={{
                 color: `${activePage === item.pageLink ? 'rgb(167 157 243)' : 'inherit'}`
               }}
+              onClick={() => setActivePage(item.pageLink)}
             >
               {item.text}
             </Link>
