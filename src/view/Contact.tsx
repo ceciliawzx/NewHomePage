@@ -9,7 +9,8 @@ export const Contact = () => {
       className='window-main'
       style={{
         width: '75%',
-        height: '100vh',
+        backgroundImage: 'url("bg3.png")',
+        backgroundSize: 'cover',
       }}
     >
       <div
@@ -20,6 +21,7 @@ export const Contact = () => {
           flexDirection: 'column',
           justifyContent: 'flex-start',
           rowGap: '20%',
+          color: 'white',
         }}
       >
         <ConactTitle />
@@ -44,8 +46,13 @@ export const Contact = () => {
 
 const ConactTitle = () => {
   return (
-    <div data-aos='fade-down'>
-      <h2>Get in touch</h2>
+    <div
+      data-aos='fade-down'
+      style={{ fontFamily: "'Times New Roman', Times, serif" }}
+    >
+      <h2 style={{ textDecoration: 'underline', textUnderlineOffset: '0.5em' }}>
+        Get in touch
+      </h2>
       <h1>Contact</h1>
     </div>
   );
@@ -84,7 +91,13 @@ const SocialMediaRow = ({ socialMedia }: { socialMedia: SocialMedia }) => {
     >
       <img
         src={socialMedia.imgLink}
-        style={{ width: '100px', height: '100px', marginRight: '20px' }}
+        style={{
+          width: '100px',
+          height: '100px',
+          marginRight: '20px',
+          borderRadius: '5px',
+          borderWidth: '0',
+        }}
       />
       <p>{socialMedia.data}</p>
     </div>
@@ -93,7 +106,7 @@ const SocialMediaRow = ({ socialMedia }: { socialMedia: SocialMedia }) => {
 
 const MessageWindow = () => {
   return (
-    <div style={{ width: '30%', paddingLeft: '50px' }}>
+    <div style={{ width: '30%', paddingLeft: '80px' }}>
       <MessageForm />
     </div>
   );
@@ -119,6 +132,7 @@ const MessageForm = () => {
         className='form-control'
         placeholder='Message'
       />
+      <button id='send-message-btn'>SEND MESSAGE</button>
     </form>
   );
 };

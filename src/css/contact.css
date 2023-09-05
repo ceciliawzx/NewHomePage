@@ -1,9 +1,49 @@
 .form-control {
-    width: 100%;
-    min-width: 200px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    font-size: medium;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  min-width: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: medium;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color:rgb(167, 157, 243);
+}
+
+/* CSS */
+#send-message-btn {
+  width: fit-content;
+  background: linear-gradient(to bottom right, rgb(167, 157, 243), #321bdf);
+  border: 0;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 85%;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 200ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-top: 8px;
+}
+
+#send-message-btn:not([disabled]):focus {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5),
+    -0.12rem -0.12rem 0.8rem rgb(167, 157, 243),
+    0.12rem 0.12rem 0.8rem #321bdf;
+}
+
+#send-message-btn:not([disabled]):hover {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5),
+    -0.12rem -0.12rem 0.8rem rgb(134, 120, 243),
+    0.12rem 0.12rem 0.8rem #3829a7;
 }
