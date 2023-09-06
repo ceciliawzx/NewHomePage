@@ -31,7 +31,7 @@ const Slides = ({ interests }: { interests: Interest[] }) => {
   }, []);
 
   return (
-    <div className='main-window' style={{}}>
+    <div className='main-window'>
       {interests.map((interest, index) => (
         <img
           key={index}

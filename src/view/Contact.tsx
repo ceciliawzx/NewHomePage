@@ -8,7 +8,6 @@ export const Contact = () => {
     <div
       className='window-main'
       style={{
-        width: '75%',
         backgroundImage: 'url("bg3.png")',
         backgroundSize: 'cover',
       }}
