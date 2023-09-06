@@ -44,9 +44,9 @@ const Profile = ({
   setShowStars: (show: boolean) => void;
 }) => {
   return (
-    <div id='profile-container'>
+    <div id='profile-container'  data-aos='fade-down'>
       <ProfileImg showStars={showStars} setShowStars={setShowStars} />
-      <div style={{ textAlign: 'center' }} data-aos='fade-up'>
+      <div style={{ textAlign: 'center' }} >
         <h2 style={{ color: 'white' }}>Hello I'm</h2>
         <h1 style={{ color: 'white' }}>Zixi Wang</h1>
         <p style={{ color: 'white', fontSize: '17px' }}>
@@ -81,7 +81,7 @@ const ProfileImg = ({
   }
 
   return (
-    <div id='profile-img' data-aos='fade-down'>
+    <div id='profile-img'>
       <img
         src='catImg1.JPG'
         style={{ height: '100%', width: 'auto' }}

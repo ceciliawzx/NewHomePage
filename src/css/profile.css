@@ -17,7 +17,7 @@
   margin: 20px;
   box-shadow: 0 0 20px #eee, /* outer white */ -5px 0 50px #f20,
     /* outer left magenta */ 5px 0 50px #0df; /* outer right cyan */
-  transition: box-shadow 500ms;
+  transition: box-shadow 500ms ease;
 }
 
 #profile-img:hover {
