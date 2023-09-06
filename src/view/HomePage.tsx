@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/style.css';
+import '../css/profile.css';
 
 export const HomePage = () => {
   return (

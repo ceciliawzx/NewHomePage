@@ -30,24 +30,3 @@
   top: 0;
   left: 0;
 }
-
-#profile-container {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#profile-img {
-  height: 200px;
-  width: 200px;
-  min-height: 100px;
-  min-width: 100px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 50%;
-  margin: 20px;
-  box-shadow: 0 0 20px #eee, /* outer white */ -5px 0 50px #f20,
-    /* outer left magenta */ 5px 0 50px #0df; /* outer right cyan */
-}
