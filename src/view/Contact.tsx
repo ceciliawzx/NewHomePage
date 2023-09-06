@@ -1,5 +1,5 @@
-import React from 'react';
-import { SocialMedia } from '../util/types';
+import React, { useState, ChangeEvent } from 'react';
+import { SocialMedia, SocialMediaType } from '../util/types';
 import { socialMedias } from '../util/data';
 import '../css/contact.css';
 
@@ -13,27 +13,9 @@ export const Contact = () => {
         backgroundSize: 'cover',
       }}
     >
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          padding: '0 3%',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          rowGap: '20%',
-          color: 'white',
-        }}
-      >
+      <div id='contact-window'>
         <ConactTitle />
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-          }}
-          data-aos='fade-up'
-        >
+        <div id='contact-container' data-aos='fade-up'>
           <SocialMedias />
           <MessageWindow />
         </div>
@@ -50,28 +32,15 @@ const ConactTitle = () => {
       data-aos='fade-down'
       style={{ fontFamily: "'Times New Roman', Times, serif" }}
     >
-      <h2 style={{ textDecoration: 'underline', textUnderlineOffset: '0.5em' }}>
-        Get in touch
-      </h2>
-      <h1>Contact</h1>
+      <div id='contact-title-getInTouch'>GET IN TOUCH</div>
+      <div id='contact-title-Contact'>Contact</div>
     </div>
   );
 };
 
 const SocialMedias = () => {
   return (
-    <div
-      id='socialmedias-container'
-      style={{
-        width: '40%',
-        display: 'flex',
-        flexDirection: 'column',
-        rowGap: '10%',
-        alignItems: 'start',
-        paddingLeft: '50px',
-        minWidth: '350px',
-      }}
-    >
+    <div id='socialmedias-container'>
       {socialMedias.map((socialMedia, i) => (
         <SocialMediaRow key={`socialmedia-${i}`} socialMedia={socialMedia} />
       ))}
@@ -90,29 +59,83 @@ const SocialMediaRow = ({ socialMedia }: { socialMedia: SocialMedia }) => {
       }}
     >
       <img
+        className='socialmedia-img'
         src={socialMedia.imgLink}
         style={{
-          width: '100px',
-          height: '100px',
-          marginRight: '20px',
-          borderRadius: '5px',
-          borderWidth: '0',
+          filter: 'opacity(1) drop-shadow(0 0 0 white)',
         }}
       />
-      <p>{socialMedia.data}</p>
+      {socialMedia.type === SocialMediaType.Wechat && (
+        <Wechat link={socialMedia.data} />
+      )}
+      {socialMedia.type === SocialMediaType.Email && (
+        <Email link={socialMedia.data} />
+      )}
+      {socialMedia.type === SocialMediaType.LinkedIn && (
+        <LinkedIn link={socialMedia.data} />
+      )}
     </div>
+  );
+};
+
+const Wechat = ({ link }: { link: string }) => {
+  return <div>{link}</div>;
+};
+
+const Email = ({ link }: { link: string }) => {
+  return (
+    <a href={`mailto:${link}`} className='socialmedia-link'>
+      <div>{link}</div>
+    </a>
+  );
+};
+
+const LinkedIn = ({ link }: { link: string }) => {
+  return (
+    <a
+      href={`https://www.linkedin.com/in/${link}`}
+      target='_blank'
+      className='socialmedia-link'
+    >
+      <div>{link}</div>
+    </a>
   );
 };
 
 const MessageWindow = () => {
   return (
-    <div style={{ width: '30%', paddingLeft: '80px' }}>
+    <div style={{ width: '33%', paddingLeft: '50px' }}>
       <MessageForm />
     </div>
   );
 };
 
 const MessageForm = () => {
+  const [emailData, setEmailData] = useState({
+    name: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleInput = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setEmailData({
+      ...emailData,
+      [name]: value,
+    });
+  };
+
+  const handleSendEmail = () => {
+    const mailtoURL = `mailto:ceciliawzx@qq.com?subject=${encodeURIComponent(
+      emailData.subject
+    )}&body=Hi Zixi: %0D%0A%0D%0A${encodeURIComponent(
+      emailData.message
+    )}%0D%0A%0D%0A${encodeURIComponent(emailData.name)}`;
+    window.location.href = mailtoURL;
+  };
+
   return (
     <form
       style={{
@@ -121,18 +144,43 @@ const MessageForm = () => {
         justifyContent: 'flex-start',
         rowGap: '10%',
       }}
+      action='mailto:ceciliawzx@qq.com'
+      method='post'
+      encType='plain/text'
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSendEmail();
+      }}
     >
-      <input type='text' className='form-control' placeholder='Name' />
-      <input type='text' className='form-control' placeholder='Email' />
-      <input type='text' className='form-control' placeholder='Subject' />
+      <input
+        type='text'
+        className='form-control'
+        placeholder='Name'
+        name='name'
+        value={emailData.name}
+        onChange={handleInput}
+      />
+      <input
+        type='text'
+        className='form-control'
+        placeholder='Subject'
+        name='subject'
+        value={emailData.subject}
+        onChange={handleInput}
+      />
       <textarea
         id='contact-message'
         cols={30}
         rows={7}
         className='form-control'
+        name='message'
         placeholder='Message'
+        value={emailData.message}
+        onChange={handleInput}
       />
-      <button id='send-message-btn'>SEND MESSAGE</button>
+      <button id='send-message-btn' type='submit'>
+        SEND MESSAGE
+      </button>
     </form>
   );
 };

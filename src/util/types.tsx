@@ -19,9 +19,17 @@ export type Interest = {
 };
 
 export type SocialMedia = {
+  type: SocialMediaType
   data: string;
   imgLink: string;
 };
+
+export enum SocialMediaType {
+  Wechat = 'Wechat',
+  Email = 'Email',
+  LinkedIn = 'LinkedIn',
+  WhatsApp = 'WhatsApp'
+}
 
 export enum Technology {
   Java = 'Java',

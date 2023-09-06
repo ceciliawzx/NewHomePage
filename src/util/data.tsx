@@ -4,6 +4,7 @@ import {
   MenuItem,
   Interest,
   SocialMedia,
+  SocialMediaType,
 } from '../util/types';
 
 export const menuItems: MenuItem[] = [
@@ -105,15 +106,18 @@ export const interests: Interest[] = [
 
 export const socialMedias: SocialMedia[] = [
   {
+    type: SocialMediaType.Email,
     data: 'ceciliawzx@qq.com',
-    imgLink: '',
+    imgLink: '/~zw4021/email.png',
   },
   {
-    data: 'wechat',
-    imgLink: ''
+    type: SocialMediaType.Wechat,
+    data: 'wechat: wsqdssltjffysk1026',
+    imgLink: '/~zw4021/wechat.jpg',
   },
   {
-    data: 'sth else',
-    imgLink: ''
-  }
+    type: SocialMediaType.LinkedIn,
+    data: 'zixi-wang-cecilia',
+    imgLink: '/~zw4021/linkedin.png',
+  },
 ];

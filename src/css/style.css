@@ -14,11 +14,10 @@
   transition: all 0.5s ease;
 }
 @media (min-width: 992px) {
-  #colorlib-main {
+  #window-main {
     width: 75%;
   }
 }
-
 
 #side-menu {
   display: flex;
