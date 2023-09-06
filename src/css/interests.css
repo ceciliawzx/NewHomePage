@@ -30,14 +30,14 @@
 
 .interest-slide.animated {
   animation-name: fadeIn;
-  animation-duration: 700ms; /* Adjust the duration as needed */
-  animation-timing-function: ease-in-out; /* Adjust the timing function as needed */
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .interest-slide.fade-out {
   animation-name: fadeOut;
-  animation-duration: 700ms; /* Adjust the duration as needed */
-  animation-timing-function: ease-in-out; /* Adjust the timing function as needed */
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }

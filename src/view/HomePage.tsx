@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/profile.css';
 
 export const HomePage = () => {
+  const [showStars, setShowStars] = useState(false);
   return (
     <div
       className='window-main'
@@ -12,15 +13,39 @@ export const HomePage = () => {
         backgroundImage: 'url("bg5.png")',
       }}
     >
-      <Profile />
+      {showStars && <ShootingStars />}
+      <Profile showStars={showStars} setShowStars={setShowStars} />
     </div>
   );
 };
 
-const Profile = () => {
+const ShootingStars = () => {
+  return (
+    <div>
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+      <span className='shooting-star' />
+    </div>
+  );
+};
+
+const Profile = ({
+  showStars,
+  setShowStars,
+}: {
+  showStars: boolean,
+  setShowStars: (show: boolean) => void;
+}) => {
   return (
     <div id='profile-container'>
-      <ProfileImg />
+      <ProfileImg showStars={showStars} setShowStars={setShowStars} />
       <div style={{ textAlign: 'center' }} data-aos='fade-up'>
         <h2 style={{ color: 'white' }}>Hello I'm</h2>
         <h1 style={{ color: 'white' }}>Zixi Wang</h1>
@@ -36,10 +61,34 @@ const Profile = () => {
   );
 };
 
-const ProfileImg = () => {
+const ProfileImg = ({
+  showStars,
+  setShowStars,
+}: {
+  showStars: boolean
+  setShowStars: (show: boolean) => void;
+}) => {
+  const handleEnter = () => {
+    setShowStars(true);
+  };
+
+  const handleLeave = () => {
+    setShowStars(false);
+  };
+
+  const handleClick = () => {
+    setShowStars(!showStars);
+  }
+
   return (
     <div id='profile-img' data-aos='fade-down'>
-      <img src='catImg1.JPG' style={{ height: '100%', width: 'auto' }} />
+      <img
+        src='catImg1.JPG'
+        style={{ height: '100%', width: 'auto' }}
+        onMouseEnter={handleEnter}
+        onMouseLeave={handleLeave}
+        onClick={handleClick}
+      />
     </div>
   );
 };
