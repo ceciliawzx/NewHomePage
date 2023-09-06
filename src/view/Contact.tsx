@@ -62,7 +62,7 @@ const SocialMediaRow = ({ socialMedia }: { socialMedia: SocialMedia }) => {
         className='socialmedia-img'
         src={socialMedia.imgLink}
         style={{
-          filter: 'opacity(1) drop-shadow(0 0 0 white)',
+          filter: 'opacity(1) drop-shadow(0 0 0 purple)',
         }}
       />
       {socialMedia.type === SocialMediaType.Wechat && (

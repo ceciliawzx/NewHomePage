@@ -15,7 +15,7 @@
 /* CSS */
 #send-message-btn {
   width: fit-content;
-  background: linear-gradient(to bottom right, rgb(167, 157, 243), #321bdf);
+  background: linear-gradient(to bottom right, rgb(17, 104, 255), #e415fb);
   border: 0;
   border-radius: 5px;
   color: #ffffff;
@@ -38,12 +38,12 @@
 
 #send-message-btn:not([disabled]):focus {
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5),
-    -0.12rem -0.12rem 0.8rem rgb(167, 157, 243), 0.12rem 0.12rem 0.8rem #321bdf;
+    -0.12rem -0.12rem 0.8rem  rgb(12, 73, 180), 0.12rem 0.12rem 0.8rem #c611da;
 }
 
 #send-message-btn:not([disabled]):hover {
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5),
-    -0.12rem -0.12rem 0.8rem rgb(134, 120, 243), 0.12rem 0.12rem 0.8rem #3829a7;
+    -0.12rem -0.12rem 0.8rem  rgb(12, 73, 180), 0.12rem 0.12rem 0.8rem #c611da;
 }
 
 #socialmedias-container {
@@ -66,8 +66,13 @@
 
 #contact-title-getInTouch {
   font-size: 12px;
-  word-spacing: 8px;
+  word-spacing: 10px;
   color: rgb(167, 157, 243);
+  transition: word-spacing 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#contact-title-getInTouch:hover {
+  word-spacing: 15px;
 }
 
 #contact-title-Contact {
