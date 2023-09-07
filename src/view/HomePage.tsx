@@ -40,13 +40,13 @@ const Profile = ({
   showStars,
   setShowStars,
 }: {
-  showStars: boolean,
+  showStars: boolean;
   setShowStars: (show: boolean) => void;
 }) => {
   return (
-    <div id='profile-container'  data-aos='fade-down'>
+    <div id='profile-container' data-aos='fade-down'>
       <ProfileImg showStars={showStars} setShowStars={setShowStars} />
-      <div style={{ textAlign: 'center' }} >
+      <div style={{ textAlign: 'center' }}>
         <h2 style={{ color: 'white' }}>Hello I'm</h2>
         <h1 style={{ color: 'white' }}>Zixi Wang</h1>
         <p style={{ color: 'white', fontSize: '17px' }}>
@@ -65,7 +65,7 @@ const ProfileImg = ({
   showStars,
   setShowStars,
 }: {
-  showStars: boolean
+  showStars: boolean;
   setShowStars: (show: boolean) => void;
 }) => {
   const handleEnter = () => {
@@ -78,7 +78,7 @@ const ProfileImg = ({
 
   const handleClick = () => {
     setShowStars(!showStars);
-  }
+  };
 
   return (
     <div id='profile-img'>

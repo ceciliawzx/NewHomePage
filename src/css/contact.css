@@ -95,6 +95,7 @@
   width: 100%;
   display: flex;
   padding: 3%;
+  margin-top: 3%;
   flex-direction: column;
   justify-content: flex-start;
   row-gap: 20%;

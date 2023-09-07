@@ -7,14 +7,21 @@ import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './css/style.css';
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
+  const [changeWidth, setChangeWidth] = useState(false);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    if (showMenu) {
+      // Delay hiding menu for 200ms, for the transition for whole-window
+      setTimeout(() => setShowMenu(!showMenu), 200);
+    } else {
+      setShowMenu(!showMenu);
+    }
+    setChangeWidth(!changeWidth);
   };
 
   useEffect(() => {
@@ -22,7 +29,7 @@ function App() {
       duration: 1000,
       once: true,
     });
-    AOS.refresh();
+    AOS.refresh(); 
   }, []);
 
   return (
@@ -36,11 +43,17 @@ function App() {
     >
       <Router>
         {showMenu && <Menu />}
-
         <div
           id='whole-window'
-          style={{ width: `${showMenu ? '75%' : '100%'}` }}
+          style={{
+            width: `${changeWidth ? '75%' : '100%'}`
+          }}
         >
+          <a id='toggle-menu' onClick={toggleMenu}>
+            <div className='toggle-menu-item' />
+            <div className='toggle-menu-item' />
+            <div className='toggle-menu-item' />
+          </a>
           <Routes>
             <Route path='/~zw4021/' element={<HomePage />} />
             <Route path='/~zw4021/projects' element={<Projects />} />
@@ -49,9 +62,6 @@ function App() {
           </Routes>
         </div>
       </Router>
-      <button id='toggle-menu' onClick={toggleMenu}>
-        toggle
-      </button>
     </div>
   );
 }
