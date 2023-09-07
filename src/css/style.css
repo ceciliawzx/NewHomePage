@@ -175,3 +175,21 @@
 #toggle-menu:hover {
   row-gap: 10px;
 }
+
+#arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent; /* Adjust the size as needed */
+  border-bottom: 10px solid transparent; /* Adjust the size as needed */
+  border-right: 15px solid white; /* Adjust the color and size as needed */
+}
+
+#toggle-menu-arrow {
+  width: 85%;
+  height: auto;
+  transition: width 300ms ease-in-out;
+}
+
+#toggle-menu-arrow:hover {
+  width: 100%;
+}

@@ -7,7 +7,12 @@ import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import './css/style.css';
 
 function App() {
@@ -29,7 +34,7 @@ function App() {
       duration: 1000,
       once: true,
     });
-    AOS.refresh(); 
+    AOS.refresh();
   }, []);
 
   return (
@@ -46,13 +51,11 @@ function App() {
         <div
           id='whole-window'
           style={{
-            width: `${changeWidth ? '75%' : '100%'}`
+            width: `${changeWidth ? '75%' : '100%'}`,
           }}
         >
-          <a id='toggle-menu' onClick={toggleMenu}>
-            <div className='toggle-menu-item' />
-            <div className='toggle-menu-item' />
-            <div className='toggle-menu-item' />
+          <a id='toggle-menu' onClick={toggleMenu} >
+            <ToggleMenu showArrow={changeWidth} />
           </a>
           <Routes>
             <Route path='/~zw4021/' element={<HomePage />} />
@@ -65,5 +68,20 @@ function App() {
     </div>
   );
 }
+
+const ToggleMenu = ({ showArrow }: { showArrow: boolean }) => {
+  if (showArrow) {
+    return (
+      <img id='toggle-menu-arrow' src='/~zw4021/arrow.png' style={{ }}/>
+    );
+  } else
+    return (
+      <>
+        <div className='toggle-menu-item' />
+        <div className='toggle-menu-item' />
+        <div className='toggle-menu-item' />
+      </>
+    );
+};
 
 export default App;
