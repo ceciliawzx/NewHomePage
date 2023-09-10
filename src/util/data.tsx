@@ -83,13 +83,20 @@ export const projects: Project[] = [
 
 export const interests: Interest[] = [
   {
-    title: 'Violin',
-    description: 'Yes I love violin',
+    title: 'Classical Music',
+    description: `I started playing violin when I was 6 years old. 
+    Despite the lackness of practice, I'm still playing it anyways. 
+    My favourite composers are Debussy, Sibelius and Tchaikovsky. 
+    I play in IC Sinfonietta and IC String Ensemble. 
+    `,
     imgLink: '/~zw4021/bg2.png',
   },
   {
     title: 'Cats',
-    description: 'Yes I love cats',
+    description: `As you can see, I love cats. 
+    I've had many cats in my life, and I used to have 7 cats at the same time.
+    I only have one now, her name is Chloe. 
+    I wish she could be happier and healthier than any other cats I had before. `,
     imgLink: '/~zw4021/bg3.png',
   },
   {

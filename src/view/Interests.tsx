@@ -37,14 +37,24 @@ const Slides = ({ interests }: { interests: Interest[] }) => {
     <>
       <div className='main-window'>
         {interests.map((interest, index) => (
-          <img
-            key={index}
-            className={`interest-slide ${
-              index === currImgIndex ? 'animated' : 'fade-out'
-            } `}
-            src={interest.imgLink}
-            alt={`Interest ${index}`}
-          />
+          <>
+            <img
+              key={index}
+              className={`interest-slide ${
+                index === currImgIndex ? 'animated' : 'fade-out'
+              } `}
+              src={interest.imgLink}
+              alt={`Interest ${index}`}
+            />
+            {/* <div
+              className={`interest-text ${
+                index === currImgIndex ? 'shown' : 'hidden'
+              }`}
+            >
+              <h1>{interest.title}</h1>
+              <p>{interest.description}</p>
+            </div> */}
+          </>
         ))}
       </div>
       <div id='slide-hover-btns'>
