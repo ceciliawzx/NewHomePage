@@ -1,0 +1,9 @@
+deploy to uni server:
+
+1. in local branch (global_test), run 'npm run build'
+2. git add build/* -f
+3. git push github global_test:global
+4. ssh labs
+5. in NewHomePage dir, git pull
+6. rm ../public_html/* -rf  # clear previous data (duplicate first when needed)
+7. cp build/* -r ../public_html/ # put new content into the dir
