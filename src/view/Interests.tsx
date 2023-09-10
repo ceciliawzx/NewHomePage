@@ -22,26 +22,41 @@ const Slides = ({ interests }: { interests: Interest[] }) => {
     );
   };
 
+  const goToImg = (index: number) => {
+    setCurrImgIndex(index);
+  };
+
   useEffect(() => {
     const timer = setInterval(goToNextImg, 8000);
-
     return () => {
       clearInterval(timer);
     };
   }, []);
 
   return (
-    <div className='main-window'>
-      {interests.map((interest, index) => (
-        <img
-          key={index}
-          className={`interest-slide ${
-            index === currImgIndex ? 'animated' : 'fade-out'
-          } `}
-          src={interest.imgLink}
-          alt={`Interest ${index}`}
-        />
-      ))}
-    </div>
+    <>
+      <div className='main-window'>
+        {interests.map((interest, index) => (
+          <img
+            key={index}
+            className={`interest-slide ${
+              index === currImgIndex ? 'animated' : 'fade-out'
+            } `}
+            src={interest.imgLink}
+            alt={`Interest ${index}`}
+          />
+        ))}
+      </div>
+      <div id='slide-hover-btns'>
+        {interests.map((interest, index) => (
+          <span
+            className={`slide-hover-btn ${
+              index === currImgIndex ? 'hover-white' : 'hover-transparent'
+            }`}
+            onClick={() => goToImg(index)}
+          />
+        ))}
+      </div>
+    </>
   );
 };
