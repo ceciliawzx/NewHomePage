@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useReducer } from 'react';
 import './App.css';
 import { Menu } from './view/Menu';
 import { HomePage } from './view/HomePage';
@@ -6,18 +6,16 @@ import { Projects } from './view/Projects';
 import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
 import AOS from 'aos';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useAppContext } from './context/appContext';
 import 'aos/dist/aos.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useLocation,
-} from 'react-router-dom';
 import './css/style.css';
 
 function App() {
-  const [showMenu, setShowMenu] = useState(false);
-  const [changeWidth, setChangeWidth] = useState(false);
+  const {
+    state: { showMenu, changeWidth },
+    api: { setShowMenu, setChangeWidth },
+  } = useAppContext();
 
   const toggleMenu = () => {
     if (showMenu) {
@@ -54,7 +52,7 @@ function App() {
             width: `${changeWidth ? '75%' : '100%'}`,
           }}
         >
-          <a id='toggle-menu' onClick={toggleMenu} >
+          <a id='toggle-menu' onClick={toggleMenu}>
             <ToggleMenu showArrow={changeWidth} />
           </a>
           <Routes>
@@ -71,9 +69,7 @@ function App() {
 
 const ToggleMenu = ({ showArrow }: { showArrow: boolean }) => {
   if (showArrow) {
-    return (
-      <img id='toggle-menu-arrow' src='/~zw4021/arrow.png' style={{ }}/>
-    );
+    return <img id='toggle-menu-arrow' src='/~zw4021/arrow.png' style={{}} />;
   } else
     return (
       <>

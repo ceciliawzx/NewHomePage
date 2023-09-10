@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/style.css';
 import { menuItems } from '../util/data';
 import '../css/menu.css';
+import { useAppContext } from '../context/appContext';
 
 export const Menu = () => {
   return (
@@ -38,7 +39,10 @@ const MenuBar = () => {
 };
 
 const MenuItems = () => {
-  const [activePage, setActivePage] = useState('/~zw4021/');
+  const {
+    state: { currPage },
+    api: { setCurrPage },
+  } = useAppContext();
 
   return (
     <ul
@@ -55,19 +59,18 @@ const MenuItems = () => {
     >
       {menuItems.map((item, i) => {
         return (
-          <li
-            key={`menu-item-${i}`}
-            className='menu-item'
-          >
+          <li key={`menu-item-${i}`} className='menu-item'>
             <Link
               className={`menu-item-elem${
-                activePage === item.pageLink ? ' active' : ''
+                currPage === item.pageLink ? ' active' : ''
               }`}
               to={item.pageLink}
               style={{
-                color: `${activePage === item.pageLink ? 'rgb(167 157 243)' : 'inherit'}`
+                color: `${
+                  currPage === item.pageLink ? 'rgb(167 157 243)' : 'inherit'
+                }`,
               }}
-              onClick={() => setActivePage(item.pageLink)}
+              onClick={() => setCurrPage(item.pageLink)}
             >
               {item.text}
             </Link>
