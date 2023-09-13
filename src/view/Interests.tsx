@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { Interest } from '../util/types';
+import { Interest, InterestType } from '../util/types';
 import { interests } from '../util/data';
 import '../css/interests.css';
+import '../css/notes.css';
 
 export const Interests = () => {
-  return <Slides interests={interests} />;
+  const [showNotes, setShowNotes] = useState(false);
+
+  return (
+    <>
+      <Slides interests={interests} setShowNotes={setShowNotes} />
+      {showNotes && <Notes />}
+    </>
+  );
 };
 
-const Slides = ({ interests }: { interests: Interest[] }) => {
+const Slides = ({
+  interests,
+  setShowNotes,
+}: {
+  interests: Interest[];
+  setShowNotes: (show: boolean) => void;
+}) => {
   const [currImgIndex, setCurrImgIndex] = useState(0);
 
   const goToPreviousImg: () => void = () => {
@@ -35,25 +49,23 @@ const Slides = ({ interests }: { interests: Interest[] }) => {
 
   return (
     <>
-      <div className='main-window'>
+      <div className='main-window' id='interest-window'>
         {interests.map((interest, index) => (
           <>
             <img
               key={index}
               className={`interest-slide ${
-                index === currImgIndex ? 'animated' : 'fade-out'
+                index === currImgIndex ? 'fade-in' : 'fade-out'
               } `}
               src={interest.imgLink}
               alt={`Interest ${index}`}
             />
-            {/* <div
-              className={`interest-text ${
-                index === currImgIndex ? 'shown' : 'hidden'
-              }`}
-            >
-              <h1>{interest.title}</h1>
-              <p>{interest.description}</p>
-            </div> */}
+            <InterestsText
+              interest={interest}
+              index={index}
+              currImgIndex={currImgIndex}
+              setShowNotes={setShowNotes}
+            />
           </>
         ))}
       </div>
@@ -68,5 +80,65 @@ const Slides = ({ interests }: { interests: Interest[] }) => {
         ))}
       </div>
     </>
+  );
+};
+
+const InterestsText = ({
+  interest,
+  index,
+  currImgIndex,
+  setShowNotes,
+}: {
+  interest: Interest;
+  index: number;
+  currImgIndex: number;
+  setShowNotes: (show: boolean) => void;
+}) => {
+  let addClassName = '';
+  switch (interest.title) {
+    case InterestType.Musical:
+      addClassName = 'music';
+      break;
+    case InterestType.Violin:
+      addClassName = 'music';
+      break;
+    case InterestType.ClassicalMusic:
+      addClassName = 'music';
+      break;
+    case InterestType.Cat:
+      addClassName = 'cat';
+      break;
+    default:
+      break;
+  }
+
+  return (
+    <div
+      className={`interest-text ${index === currImgIndex ? 'shown' : 'hidden'}`}
+    >
+      <h1
+        className={`interest-text-title ${addClassName}`}
+        onMouseEnter={() => setShowNotes(true)}
+        onMouseLeave={() => setShowNotes(false)}
+      >
+        {interest.title}
+      </h1>
+      <p className='interest-text-intro'>{interest.intro}</p>
+    </div>
+  );
+};
+
+const Notes = () => {
+  return (
+    <div id='floating-notes'>
+      <div className='note-1'>&#9835; &#9833;</div>
+      <div className='note-2'>&#9833;</div>
+      <div className='note-3'>&#9839; &#9834;</div>
+      <div className='note-4'>&#9838;</div>
+      <div className='note-5'>&#127926;</div>
+      <div className='note-6'>&#127931;</div>
+      <div className='note-7'>&#119070;</div>
+      <div className='note-8'>&#9834;</div>
+    </div>
   );
 };

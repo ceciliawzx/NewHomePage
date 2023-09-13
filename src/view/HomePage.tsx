@@ -46,10 +46,10 @@ const Profile = ({
   return (
     <div id='profile-container' data-aos='fade-down'>
       <ProfileImg showStars={showStars} setShowStars={setShowStars} />
-      <div style={{ textAlign: 'center' }}>
-        <h2 style={{ color: 'white' }}>Hello I'm</h2>
-        <h1 style={{ color: 'white' }}>Zixi Wang</h1>
-        <p style={{ color: 'white', fontSize: '17px' }}>
+      <div style={{ textAlign: 'center', color: 'white' }}>
+        <h2>Hello I'm</h2>
+        <h1 style={{ fontFamily: 'Georgia, serif', fontWeight: 'bolder'}}>Zixi Wang</h1>
+        <p style={{ fontSize: '19px' }}>
           I'm currently a 3rd year UG in Imperial College London, Department of
           Computing.
           <br />

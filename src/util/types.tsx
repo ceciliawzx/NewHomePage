@@ -13,10 +13,19 @@ export type Project = {
 };
 
 export type Interest = {
-  title: string;
+  title: InterestType;
+  intro: string;
   description?: string;
   imgLink: string;
 };
+
+export enum InterestType {
+  ClassicalMusic = 'Classical Music',
+  Violin = 'Violin',
+  Musical = 'Musical',
+  Traveling = 'Traveling',
+  Cat = 'Cat',
+}
 
 export type SocialMedia = {
   type: SocialMediaType

@@ -49,14 +49,7 @@ const SocialMedias = () => {
 
 const SocialMediaRow = ({ socialMedia }: { socialMedia: SocialMedia }) => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignContent: 'start',
-        alignItems: 'center',
-      }}
-    >
+    <div className='socialmedia-row'>
       <img
         className='socialmedia-img'
         src={socialMedia.imgLink}
@@ -84,7 +77,14 @@ const Wechat = ({ link }: { link: string }) => {
 const Email = ({ link }: { link: string }) => {
   return (
     <a href={`mailto:${link}`} className='socialmedia-link'>
-      <div>{link}</div>
+      <div
+        style={{
+          wordWrap: 'break-word',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+        {link}
+      </div>
     </a>
   );
 };
@@ -103,7 +103,7 @@ const LinkedIn = ({ link }: { link: string }) => {
 
 const MessageWindow = () => {
   return (
-    <div style={{ width: '33%', paddingLeft: '50px' }}>
+    <div>
       <MessageForm />
     </div>
   );
@@ -137,12 +137,7 @@ const MessageForm = () => {
 
   return (
     <form
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        rowGap: '10%',
-      }}
+      id='contact-form'
       action='mailto:ceciliawzx@qq.com'
       method='post'
       encType='plain/text'

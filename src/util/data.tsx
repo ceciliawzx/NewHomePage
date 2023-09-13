@@ -3,6 +3,7 @@ import {
   Technology,
   MenuItem,
   Interest,
+  InterestType,
   SocialMedia,
   SocialMediaType,
 } from '../util/types';
@@ -52,7 +53,8 @@ export const projects: Project[] = [
     We wrote a compiler for a simple language from scratch using Scala. 
     In front end we performed lexical analysis, 
     syntactic analysis and semantic analysis to generate an AST and a symbol table, 
-    and in back end we visited the AST to generate corresponding assembly. 
+    and in back end we added a code generator by
+    visiting the AST and generate assembly for ARM11 architecture. 
     We faced challenges of learning and applying new language, 
     and registers/stack management, 
     but gained comprehensive understanding of compilers.`,
@@ -62,9 +64,9 @@ export const projects: Project[] = [
     title: 'DRP',
     time: 'May - Jun 2023',
     technologies: [Technology.Kotlin, Technology.Firebase, Technology.SQLite],
-    description: `DRP was a group project of 4 people, 
-    which stands for Design for Real People, we aimed to target and try to solve 
-    a real-world problem by learning and applying technologies. `,
+    description: `DRP stands for Design for Real People, a group project of 4 people.
+    we aimed to target and try to solve a real-world problem 
+    by learning and applying technologies. `,
     detail: `DRP was a group project for 4 people in 2nd year. 
       Our object was to find and solve a problem in the real-world. 
       After research and interview, our group chose the problem statement: 
@@ -83,31 +85,30 @@ export const projects: Project[] = [
 
 export const interests: Interest[] = [
   {
-    title: 'Classical Music',
-    description: `I started playing violin when I was 6 years old. 
-    Despite the lackness of practice, I'm still playing it anyways. 
+    title: InterestType.ClassicalMusic,
+    intro: `"Music is art decorating time."`,
+    description: `I started playing violin when I was 6 years old.
+    Despite the lackness of practice, I'm still playing it anyways.
     My favourite composers are Debussy, Sibelius and Tchaikovsky. 
     I play in IC Sinfonietta and IC String Ensemble. 
     `,
-    imgLink: '/~zw4021/bg/bg2.png',
+    imgLink: '/~zw4021/interests/music-score.jpg',
   },
   {
-    title: 'Cats',
-    description: `As you can see, I love cats. 
-    I've had many cats in my life, and I used to have 7 cats at the same time.
-    I only have one now, her name is Chloe. 
+    title: InterestType.Cat,
+    intro: `As you might have found out, I love cats.`,
+    description: `I've had many cats in my life, and I used to have 7 cats at the same time.
+    I only have one now, her name is Chloe.
     I wish she could be happier and healthier than any other cats I had before. `,
-    imgLink: '/~zw4021/bg/bg3.png',
+    imgLink: '/~zw4021/interests/cat.jpg',
   },
   {
-    title: 'Musicals',
-    description: 'Yes I love musicals',
-    imgLink: '/~zw4021/bg/bg4.png',
-  },
-  {
-    title: 'Musicals',
-    description: 'Yes I love musicals',
-    imgLink: '/~zw4021/bg/bg5.png',
+    title: InterestType.Musical,
+    intro: `"Measure your life in love."`,
+    description: `My favourite musical is Les Miserables. 
+    I also love Phantom of the Opera, Hamilton, Cats, Elisabeth, 
+    Rent, Mozart!, Mozart l'opéra rock, Le Rouge et le Noir and so on...`,
+    imgLink: '/~zw4021/interests/musical.jpg',
   },
 ];
 
