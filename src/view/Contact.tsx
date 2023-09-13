@@ -8,7 +8,7 @@ export const Contact = () => {
     <div
       className='window-main'
       style={{
-        backgroundImage: 'url("bg3.png")',
+        backgroundImage: 'url("./bg/contact-bg.png")',
         backgroundSize: 'cover',
       }}
     >

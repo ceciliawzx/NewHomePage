@@ -11,7 +11,7 @@ export const Projects = () => {
       style={{
         flexDirection: 'column',
         alignContent: 'center',
-        backgroundImage: 'url("home-bg.png")',
+        backgroundImage: 'url("./bg/project-bg.png")',
       }}
     >
       <ProjectsContainer />

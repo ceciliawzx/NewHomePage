@@ -69,7 +69,7 @@ function App() {
 
 const ToggleMenu = ({ showArrow }: { showArrow: boolean }) => {
   if (showArrow) {
-    return <img id='toggle-menu-arrow' src='/~zw4021/arrow.png' style={{}} />;
+    return <img id='toggle-menu-arrow' src='/~zw4021/icon/arrow.png' style={{}} />;
   } else
     return (
       <>

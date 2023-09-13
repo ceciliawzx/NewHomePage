@@ -10,7 +10,7 @@ export const HomePage = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundImage: 'url("bg5.png")',
+        backgroundImage: 'url("./bg/home-bg.png")',
       }}
     >
       {showStars && <ShootingStars />}

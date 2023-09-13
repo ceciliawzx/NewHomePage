@@ -40,7 +40,7 @@ export const projects: Project[] = [
     Our objectives was to strengthen these areas and add a virtual memory implementation. 
     We faced challenges like concurrency, memory leak and data structure design, 
     but also learned a lot about C language and the overall operating system.`,
-    imgLink: '/~zw4021/pintos.jpg',
+    imgLink: '/~zw4021/project/pintos.jpg',
   },
   {
     title: 'WACC',
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     We faced challenges of learning and applying new language, 
     and registers/stack management, 
     but gained comprehensive understanding of compilers.`,
-    imgLink: '/~zw4021/wacc.jpg',
+    imgLink: '/~zw4021/project/wacc.jpg',
   },
   {
     title: 'DRP',
@@ -77,7 +77,7 @@ export const projects: Project[] = [
       based on users feedback. It was a relatively short project, 
       but we were able to learn the process of delivering a product from the very beginning, 
       and also learned about the differences between school knowledge and designing for the real-world. `,
-    imgLink: '/~zw4021/drp.png',
+    imgLink: '/~zw4021/project/drp.png',
   },
 ];
 
@@ -89,7 +89,7 @@ export const interests: Interest[] = [
     My favourite composers are Debussy, Sibelius and Tchaikovsky. 
     I play in IC Sinfonietta and IC String Ensemble. 
     `,
-    imgLink: '/~zw4021/bg2.png',
+    imgLink: '/~zw4021/bg/bg2.png',
   },
   {
     title: 'Cats',
@@ -97,17 +97,17 @@ export const interests: Interest[] = [
     I've had many cats in my life, and I used to have 7 cats at the same time.
     I only have one now, her name is Chloe. 
     I wish she could be happier and healthier than any other cats I had before. `,
-    imgLink: '/~zw4021/bg3.png',
+    imgLink: '/~zw4021/bg/bg3.png',
   },
   {
     title: 'Musicals',
     description: 'Yes I love musicals',
-    imgLink: '/~zw4021/bg4.png',
+    imgLink: '/~zw4021/bg/bg4.png',
   },
   {
     title: 'Musicals',
     description: 'Yes I love musicals',
-    imgLink: '/~zw4021/bg5.png',
+    imgLink: '/~zw4021/bg/bg5.png',
   },
 ];
 
@@ -115,16 +115,16 @@ export const socialMedias: SocialMedia[] = [
   {
     type: SocialMediaType.Email,
     data: 'ceciliawzx@qq.com',
-    imgLink: '/~zw4021/email.png',
+    imgLink: '/~zw4021/icon/email.png',
   },
   {
     type: SocialMediaType.Wechat,
-    data: 'wechat: wsqdssltjffysk1026',
+    data: 'wechat',
     imgLink: '/~zw4021/wechat.jpg',
   },
   {
     type: SocialMediaType.LinkedIn,
     data: 'zixi-wang-cecilia',
-    imgLink: '/~zw4021/linkedin.png',
+    imgLink: '/~zw4021/icon/linkedin.png',
   },
 ];
