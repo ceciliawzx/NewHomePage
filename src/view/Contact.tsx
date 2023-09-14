@@ -112,6 +112,7 @@ const MessageWindow = () => {
 const MessageForm = () => {
   const [emailData, setEmailData] = useState({
     name: '',
+    email: '',
     subject: '',
     message: '',
   });
@@ -126,13 +127,20 @@ const MessageForm = () => {
     });
   };
 
-  const handleSendEmail = () => {
-    const mailtoURL = `mailto:ceciliawzx@qq.com?subject=${encodeURIComponent(
-      emailData.subject
-    )}&body=Hi Zixi: %0D%0A%0D%0A${encodeURIComponent(
-      emailData.message
-    )}%0D%0A%0D%0A${encodeURIComponent(emailData.name)}`;
-    window.location.href = mailtoURL;
+  const handleSendEmail = (event: React.FormEvent) => {
+    event.preventDefault();
+    // @ts-ignore
+    if (window.Email) {
+      const config = {
+        SecureToken: '97a2e71c-83ed-4caa-b212-af5030f019d2',
+        To: 'ceciliawzx@qq.com',
+        From: emailData.email,
+        Subject: emailData.subject,
+        Body: emailData.message,
+      };
+      // @ts-ignore
+      window.Email.send(config).then(() => alert('Message sent successfully'));
+    }
   };
 
   return (
@@ -141,10 +149,7 @@ const MessageForm = () => {
       action='mailto:ceciliawzx@qq.com'
       method='post'
       encType='plain/text'
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSendEmail();
-      }}
+      onSubmit={handleSendEmail}
     >
       <input
         type='text'
@@ -152,6 +157,14 @@ const MessageForm = () => {
         placeholder='Name'
         name='name'
         value={emailData.name}
+        onChange={handleInput}
+      />
+      <input
+        type='text'
+        className='form-control'
+        placeholder='Email'
+        name='email'
+        value={emailData.email}
         onChange={handleInput}
       />
       <input
