@@ -38,10 +38,20 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <img className='project-img' src={project.imgLink} />
       </div>
       <div style={{ textAlign: 'center' }}>
-        <p style={{ fontSize: '23px', fontWeight: 'bold' }}>{project.title}</p>
+        <p
+          style={{
+            fontSize: '23px',
+            fontWeight: 'bold',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+          }}
+        >
+          {project.title}
+        </p>
       </div>
       <div style={{ textAlign: 'center' }}>
-        <p style={{ fontSize: '17px', fontFamily: 'cursive' }}>{project.time}</p>
+        <p style={{ fontSize: '17px', fontFamily: 'cursive' }}>
+          {project.time}
+        </p>
       </div>
       <div className='technologies-container'>
         {project.technologies?.map((technology, i) => (
@@ -51,7 +61,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             style={{
               borderColor: `${getTechColor(technology)}`,
               color: `${getTechColor(technology)}`,
-              fontFamily: 'sans-serif'
+              fontFamily: 'sans-serif',
             }}
           >
             {technology}

@@ -29,38 +29,6 @@ export const menuItems: MenuItem[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Pintos',
-    time: 'Oct - Dec 2022',
-    technologies: [Technology.C, Technology.OS],
-    description: `Pintos was a group project of 4 people. 
-    We worked on a simple operating system framework to enhance features of scheduling,
-    file system and added a virtual memeory implementation.`,
-    detail: `Pintos was a group project in 2nd year. 
-    We worked on a simple OS framework for 80*86 architecture that supports kernel threads, 
-    loading and running user programs, and a file system. 
-    Our objectives was to strengthen these areas and add a virtual memory implementation. 
-    We faced challenges like concurrency, memory leak and data structure design, 
-    but also learned a lot about C language and the overall operating system.`,
-    imgLink: '/~zw4021/project/pintos.jpg',
-  },
-  {
-    title: 'WACC',
-    time: 'Jan - Mar 2023',
-    technologies: [Technology.Scala, Technology.Compiler],
-    description: `WACC was a group project of 4 people.
-    We wrote a compiler for a simple language from scratch. `,
-    detail: `WACC was a group project of 4 people in 2nd year. 
-    We wrote a compiler for a simple language from scratch using Scala. 
-    In front end we performed lexical analysis, 
-    syntactic analysis and semantic analysis to generate an AST and a symbol table, 
-    and in back end we added a code generator by
-    visiting the AST and generate assembly for ARM11 architecture. 
-    We faced challenges of learning and applying new language, 
-    and registers/stack management, 
-    but gained comprehensive understanding of compilers.`,
-    imgLink: '/~zw4021/project/wacc.jpg',
-  },
-  {
     title: 'DRP',
     time: 'May - Jun 2023',
     technologies: [Technology.Kotlin, Technology.Firebase, Technology.SQLite],
@@ -80,6 +48,38 @@ export const projects: Project[] = [
       but we were able to learn the process of delivering a product from the very beginning, 
       and also learned about the differences between school knowledge and designing for the real-world. `,
     imgLink: '/~zw4021/project/drp.png',
+  },
+  {
+    title: 'WACC',
+    time: 'Jan - Mar 2023',
+    technologies: [Technology.Scala, Technology.Compiler],
+    description: `WACC was a group project of 4 people.
+    We wrote a compiler for a simple language from scratch. `,
+    detail: `WACC was a group project of 4 people in 2nd year. 
+    We wrote a compiler for a simple language from scratch using Scala. 
+    In front end we performed lexical analysis, 
+    syntactic analysis and semantic analysis to generate an AST and a symbol table, 
+    and in back end we added a code generator by
+    visiting the AST and generate assembly for ARM11 architecture. 
+    We faced challenges of learning and applying new language, 
+    and registers/stack management, 
+    but gained comprehensive understanding of compilers.`,
+    imgLink: '/~zw4021/project/wacc.jpg',
+  },
+  {
+    title: 'Pintos',
+    time: 'Oct - Dec 2022',
+    technologies: [Technology.C, Technology.OS],
+    description: `Pintos was a group project of 4 people. 
+    We worked on a simple operating system framework to enhance features of scheduling,
+    file system and added a virtual memeory implementation.`,
+    detail: `Pintos was a group project in 2nd year. 
+    We worked on a simple OS framework for 80*86 architecture that supports kernel threads, 
+    loading and running user programs, and a file system. 
+    Our objectives was to strengthen these areas and add a virtual memory implementation. 
+    We faced challenges like concurrency, memory leak and data structure design, 
+    but also learned a lot about C language and the overall operating system.`,
+    imgLink: '/~zw4021/project/pintos.jpg',
   },
 ];
 
