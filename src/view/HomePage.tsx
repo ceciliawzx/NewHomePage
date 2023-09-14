@@ -48,7 +48,15 @@ const Profile = ({
       <ProfileImg showStars={showStars} setShowStars={setShowStars} />
       <div style={{ textAlign: 'center', color: 'white' }}>
         <h2>Hello I'm</h2>
-        <h1 style={{ fontFamily: 'Georgia, serif', fontWeight: 'bolder'}}>Zixi Wang</h1>
+        <h1
+          style={{
+            fontFamily: 'Georgia, serif',
+            fontWeight: 'bolder',
+            textShadow: '3px 3px 8px black',
+          }}
+        >
+          Zixi Wang
+        </h1>
         <p style={{ fontSize: '19px' }}>
           I'm currently a 3rd year UG in Imperial College London, Department of
           Computing.
@@ -76,10 +84,6 @@ const ProfileImg = ({
     setShowStars(false);
   };
 
-  const handleClick = () => {
-    setShowStars(!showStars);
-  };
-
   return (
     <div id='profile-img'>
       <img
@@ -87,7 +91,6 @@ const ProfileImg = ({
         style={{ height: '100%', width: 'auto' }}
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
-        onClick={handleClick}
       />
     </div>
   );

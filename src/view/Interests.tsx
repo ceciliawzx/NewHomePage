@@ -8,10 +8,10 @@ export const Interests = () => {
   const [showNotes, setShowNotes] = useState(false);
 
   return (
-    <>
+    <div className='window-main' style={{backgroundColor: 'black'}}>
       <Slides interests={interests} setShowNotes={setShowNotes} />
       {showNotes && <Notes />}
-    </>
+    </div>
   );
 };
 
@@ -49,7 +49,7 @@ const Slides = ({
 
   return (
     <>
-      <div className='main-window' id='interest-window'>
+      <div id='interest-window'>
         {interests.map((interest, index) => (
           <>
             <img
