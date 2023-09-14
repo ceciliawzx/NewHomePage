@@ -115,7 +115,7 @@ export const interests: Interest[] = [
 export const socialMedias: SocialMedia[] = [
   {
     type: SocialMediaType.Email,
-    data: 'ceciliawzx@qq.com',
+    data: 'zixiwangcecilia@gmail.com',
     imgLink: '/~zw4021/icon/email.png',
   },
   {

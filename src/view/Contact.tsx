@@ -132,21 +132,22 @@ const MessageForm = () => {
     // @ts-ignore
     if (window.Email) {
       const config = {
-        SecureToken: '97a2e71c-83ed-4caa-b212-af5030f019d2',
+        SecureToken: '8326cf45-b68c-441a-85db-67856aba0f51',
         To: 'ceciliawzx@qq.com',
         From: emailData.email,
         Subject: emailData.subject,
         Body: `${emailData.name} connected to you over your website:\n${emailData.message}`,
       };
       // @ts-ignore
-      window.Email.send(config).then(() => alert('Message sent successfully'));
+      window.Email.send(config).then(
+        (message: string) => alert(`${message == 'OK' ? 'Message sent successfully' : message}`),
+      );
     }
   };
-
   return (
     <form
       id='contact-form'
-      action='mailto:ceciliawzx@qq.com'
+      action='mailto:zixiwangcecilia@gmail.com'
       method='post'
       encType='plain/text'
       onSubmit={handleSendEmail}
