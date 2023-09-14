@@ -116,14 +116,14 @@ const InterestsText = ({
     <div
       className={`interest-text ${index === currImgIndex ? 'shown' : 'hidden'}`}
     >
-      <h1
+      <div
         className={`interest-text-title ${addClassName}`}
         onMouseEnter={() => setShowNotes(true)}
         onMouseLeave={() => setShowNotes(false)}
       >
         {interest.title}
-      </h1>
-      <p className='interest-text-intro'>{interest.intro}</p>
+      </div>
+      <div className='interest-text-intro'>{interest.intro}</div>
     </div>
   );
 };

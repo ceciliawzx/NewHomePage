@@ -9,7 +9,7 @@ export const Contact = () => {
       className='window-main'
       style={{
         backgroundImage: 'url("./bg/contact-bg.png")',
-        backgroundSize: 'cover',
+        flexDirection: 'column',
       }}
     >
       <div id='contact-window'>

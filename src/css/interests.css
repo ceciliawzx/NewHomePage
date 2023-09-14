@@ -84,10 +84,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: pre; /* preserves line breaks and spaces */
+  word-wrap: break-word; /* enable word wrapping */
+  overflow-wrap: break-word;
+  row-gap: 10%;
 }
 
 .interest-text.shown {
@@ -105,8 +109,8 @@
 }
 
 .interest-text-title {
-  font-size: 50px;
   font-weight: bolder;
+  font-size: larger;
 }
 
 .interest-text-title.music:hover {
@@ -114,8 +118,4 @@
 }
 .interest-text-title.cat:hover {
   cursor: url("cursor-cat.svg"), auto;
-}
-
-#interest-text-intro {
-  font-size: 20px;
 }
