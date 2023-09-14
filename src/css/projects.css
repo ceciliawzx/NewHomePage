@@ -24,7 +24,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
-  margin: 10% 5%;
+  margin: 10% 5% 0 5%;
 }
 
 .project-card {
