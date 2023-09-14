@@ -136,7 +136,7 @@ const MessageForm = () => {
         To: 'ceciliawzx@qq.com',
         From: emailData.email,
         Subject: emailData.subject,
-        Body: emailData.message,
+        Body: `${emailData.name} connected to you over your website:\n${emailData.message}`,
       };
       // @ts-ignore
       window.Email.send(config).then(() => alert('Message sent successfully'));
