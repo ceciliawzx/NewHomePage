@@ -6,6 +6,8 @@ import { Projects } from './view/Projects';
 import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
 import { DRP } from './projects/DRP';
+import { mainUrl, projectUrl, interestUrl, contactUrl } from './util/data';
+
 import AOS from 'aos';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useAppContext } from './context/appContext';
@@ -57,11 +59,11 @@ function App() {
             <ToggleMenu showArrow={changeWidth} />
           </a>
           <Routes>
-            <Route path='/~zw4021/' element={<HomePage />} />
-            <Route path='/~zw4021/projects' element={<Projects />} />
-            <Route path='/~zw4021/interests' element={<Interests />} />
-            <Route path='/~zw4021/contact' element={<Contact />} />
-            <Route path='/~zw4021/projects/drp' element={<DRP />} />
+            <Route path={mainUrl} element={<HomePage />} />
+            <Route path={projectUrl} element={<Projects />} />
+            <Route path={interestUrl} element={<Interests />} />
+            <Route path={contactUrl} element={<Contact />} />
+            <Route path={`${projectUrl}drp`} element={<DRP />} />
           </Routes>
         </div>
       </Router>
@@ -71,7 +73,7 @@ function App() {
 
 const ToggleMenu = ({ showArrow }: { showArrow: boolean }) => {
   if (showArrow) {
-    return <img id='toggle-menu-arrow' src='/~zw4021/icon/arrow.png' style={{}} />;
+    return <img id='toggle-menu-arrow' src={`${mainUrl}icon/arrow.png`} />;
   } else
     return (
       <>

@@ -8,22 +8,28 @@ import {
   SocialMediaType,
 } from '../util/types';
 
+export const mainUrl = '/~zw4021/';
+export const projectUrl = `${mainUrl}projects/`;
+export const interestUrl = `${mainUrl}interests/`;
+export const contactUrl = `${mainUrl}contact/`;
+export const bgUrl = `${mainUrl}bg/`;
+
 export const menuItems: MenuItem[] = [
   {
     text: 'HOME',
-    pageLink: '/~zw4021/',
+    pageLink: mainUrl,
   },
   {
     text: 'PROJECTS',
-    pageLink: '/~zw4021/projects',
+    pageLink: projectUrl,
   },
   {
     text: 'INTERESTS',
-    pageLink: '/~zw4021/interests',
+    pageLink: interestUrl,
   },
   {
     text: 'CONTACT',
-    pageLink: '/~zw4021/contact',
+    pageLink: contactUrl,
   },
 ];
 
@@ -47,8 +53,8 @@ export const projects: Project[] = [
       based on users feedback. It was a relatively short project, 
       but we were able to learn the process of delivering a product from the very beginning, 
       and also learned about the differences between school knowledge and designing for the real-world. `,
-    imgLink: '/~zw4021/project/drp.png',
-    pageLink: '/~zw4021/projects/DRP',
+    imgLink: `${projectUrl}drp.png`,
+    pageLink: `${projectUrl}drp`,
   },
   {
     title: 'WACC',
@@ -65,7 +71,7 @@ export const projects: Project[] = [
     We faced challenges of learning and applying new language, 
     and registers/stack management, 
     but gained comprehensive understanding of compilers.`,
-    imgLink: '/~zw4021/project/wacc.jpg',
+    imgLink: `${projectUrl}wacc.jpg`,
   },
   {
     title: 'Pintos',
@@ -80,7 +86,7 @@ export const projects: Project[] = [
     Our objectives was to strengthen these areas and add a virtual memory implementation. 
     We faced challenges like concurrency, memory leak and data structure design, 
     but also learned a lot about C language and the overall operating system.`,
-    imgLink: '/~zw4021/project/pintos.jpg',
+    imgLink: `${projectUrl}pintos.jpg`,
   },
 ];
 
@@ -93,7 +99,7 @@ export const interests: Interest[] = [
     My favourite composers are Debussy, Sibelius and Tchaikovsky. 
     I play in IC Sinfonietta and IC String Ensemble. 
     `,
-    imgLink: '/~zw4021/interests/music-score.jpg',
+    imgLink: `${interestUrl}music-score.jpg`,
   },
   {
     title: InterestType.Cats,
@@ -101,7 +107,7 @@ export const interests: Interest[] = [
     description: `I've had many cats in my life, and I used to have 7 cats at the same time.
     I only have one now, her name is Chloe.
     I wish she could be happier and healthier than any other cats I had before. `,
-    imgLink: '/~zw4021/interests/cat.jpg',
+    imgLink: `${interestUrl}cat.jpg`
   },
   {
     title: InterestType.Musicals,
@@ -109,13 +115,13 @@ export const interests: Interest[] = [
     description: `My favourite musical is Les Miserables. 
     I also love Phantom of the Opera, Hamilton, Cats, Elisabeth, 
     Rent, Mozart!, Mozart l'opéra rock, Le Rouge et le Noir and so on...`,
-    imgLink: '/~zw4021/interests/musical.jpg',
+    imgLink: `${interestUrl}musical.jpg`,
   },
   {
     title: InterestType.Poems,
     intro: `『曾批给雨支风券，累上留云借月章。』`,
     description: `"Shall I compare thee to a summer's day?"`,
-    imgLink: '/~zw4021/interests/poem.jpg',
+    imgLink: `${interestUrl}poem.jpg`,
   },
 ];
 
@@ -123,16 +129,16 @@ export const socialMedias: SocialMedia[] = [
   {
     type: SocialMediaType.Email,
     data: 'zixiwangcecilia@gmail.com',
-    imgLink: '/~zw4021/icon/email.png',
+    imgLink: `${mainUrl}icon/email.png`,
   },
   {
     type: SocialMediaType.Wechat,
     data: 'wechat',
-    imgLink: '/~zw4021/wechat.jpg',
+    imgLink: `${mainUrl}wechat.jpg`,
   },
   {
     type: SocialMediaType.LinkedIn,
     data: 'zixi-wang-cecilia',
-    imgLink: '/~zw4021/icon/linkedin.png',
+    imgLink: `${mainUrl}icon/linkedin.png`,
   },
 ];

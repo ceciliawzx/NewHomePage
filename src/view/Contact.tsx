@@ -2,13 +2,14 @@ import React, { useState, ChangeEvent } from 'react';
 import { SocialMedia, SocialMediaType } from '../util/types';
 import { socialMedias } from '../util/data';
 import '../css/contact.css';
+import { mainUrl } from '../util/data';
 
 export const Contact = () => {
   return (
     <div
       className='window-main'
       style={{
-        backgroundImage: 'url("./bg/contact-bg.png")',
+        backgroundImage: 'url("../bg/contact-bg.png")',
         flexDirection: 'column',
       }}
     >
