@@ -48,6 +48,7 @@ export const projects: Project[] = [
       but we were able to learn the process of delivering a product from the very beginning, 
       and also learned about the differences between school knowledge and designing for the real-world. `,
     imgLink: '/~zw4021/project/drp.png',
+    pageLink: '/~zw4021/projects/DRP',
   },
   {
     title: 'WACC',
@@ -95,7 +96,7 @@ export const interests: Interest[] = [
     imgLink: '/~zw4021/interests/music-score.jpg',
   },
   {
-    title: InterestType.Cat,
+    title: InterestType.Cats,
     intro: `As you might have found out, I love cats.`,
     description: `I've had many cats in my life, and I used to have 7 cats at the same time.
     I only have one now, her name is Chloe.
@@ -103,12 +104,18 @@ export const interests: Interest[] = [
     imgLink: '/~zw4021/interests/cat.jpg',
   },
   {
-    title: InterestType.Musical,
+    title: InterestType.Musicals,
     intro: `"Measure your life in love."`,
     description: `My favourite musical is Les Miserables. 
     I also love Phantom of the Opera, Hamilton, Cats, Elisabeth, 
     Rent, Mozart!, Mozart l'opéra rock, Le Rouge et le Noir and so on...`,
     imgLink: '/~zw4021/interests/musical.jpg',
+  },
+  {
+    title: InterestType.Poems,
+    intro: `『曾批给雨支风券，累上留云借月章。』`,
+    description: `"Shall I compare thee to a summer's day?"`,
+    imgLink: '/~zw4021/interests/poem.jpg',
   },
 ];
 

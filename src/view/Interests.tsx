@@ -96,7 +96,7 @@ const InterestsText = ({
 }) => {
   let addClassName = '';
   switch (interest.title) {
-    case InterestType.Musical:
+    case InterestType.Musicals:
       addClassName = 'music';
       break;
     case InterestType.Violin:
@@ -105,7 +105,7 @@ const InterestsText = ({
     case InterestType.ClassicalMusic:
       addClassName = 'music';
       break;
-    case InterestType.Cat:
+    case InterestType.Cats:
       addClassName = 'cat';
       break;
     default:

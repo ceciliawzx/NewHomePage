@@ -46,4 +46,11 @@
   overflow: hidden;
   border-radius: 5%;
   box-shadow: 5px 5px 10px #000;
+  transition: all 400ms ease-in-out;
+  cursor: pointer;
+}
+
+.project-img:hover {
+  width: 90%;
+  height: 370px;
 }

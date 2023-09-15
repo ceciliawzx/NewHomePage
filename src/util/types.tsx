@@ -10,6 +10,7 @@ export type Project = {
   description: string;
   detail?: string;
   imgLink: string;
+  pageLink?: string;
 };
 
 export type Interest = {
@@ -22,9 +23,10 @@ export type Interest = {
 export enum InterestType {
   ClassicalMusic = 'Classical Music',
   Violin = 'Violin',
-  Musical = 'Musical',
+  Musicals = 'Musicals',
   Traveling = 'Traveling',
-  Cat = 'Cat',
+  Cats = 'Cats',
+  Poems = 'Poems',
 }
 
 export type SocialMedia = {

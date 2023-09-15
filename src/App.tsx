@@ -5,6 +5,7 @@ import { HomePage } from './view/HomePage';
 import { Projects } from './view/Projects';
 import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
+import { DRP } from './projects/DRP';
 import AOS from 'aos';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useAppContext } from './context/appContext';
@@ -60,6 +61,7 @@ function App() {
             <Route path='/~zw4021/projects' element={<Projects />} />
             <Route path='/~zw4021/interests' element={<Interests />} />
             <Route path='/~zw4021/contact' element={<Contact />} />
+            <Route path='/~zw4021/projects/drp' element={<DRP />} />
           </Routes>
         </div>
       </Router>

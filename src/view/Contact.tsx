@@ -23,8 +23,6 @@ export const Contact = () => {
   );
 };
 
-// const
-
 const ConactTitle = () => {
   return (
     <div
