@@ -10,7 +10,7 @@ export type Project = {
   description: string;
   projectDetails: ProjectDetail[];
   imgLink: string;
-  pageLink?: string;
+  pageLink: string;
 };
 
 export type ProjectDetail = {

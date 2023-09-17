@@ -113,6 +113,7 @@ const WACC: Project = {
     },
   ],
   imgLink: `${projectUrl}wacc.jpg`,
+  pageLink: ``
 };
 
 const Pintos: Project = {
@@ -135,6 +136,7 @@ const Pintos: Project = {
     },
   ],
   imgLink: `${projectUrl}pintos.jpg`,
+  pageLink: ``
 };
 
 export const projects: Project[] = [DRP, WACC, Pintos];

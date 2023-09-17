@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Project, Technology } from '../util/types';
 import { projects } from '../util/data';
 import { getTechColor } from '../util/util';
@@ -36,9 +37,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div data-aos='fade-up'>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <a className='project-img-container' href={project.pageLink}>
+        <Link className='project-img-container' to={project.pageLink}>
           <img className='project-img' src={project.imgLink} />
-        </a>
+        </Link>
       </div>
       <div style={{ textAlign: 'center' }}>
         <p
