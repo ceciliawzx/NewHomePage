@@ -3,25 +3,22 @@ import { Interest, InterestType } from '../util/types';
 import { interests } from '../data/interests';
 import '../css/interests.css';
 import '../css/notes.css';
+import { useAppContext } from '../context/appContext';
 
 export const Interests = () => {
-  const [showNotes, setShowNotes] = useState(false);
+  const {
+    state: { showNotes },
+  } = useAppContext();
 
   return (
     <div className='window-main' style={{ backgroundColor: 'black' }}>
-      <Slides interests={interests} setShowNotes={setShowNotes} />
+      <Slides interests={interests} />
       {showNotes && <Notes />}
     </div>
   );
 };
 
-const Slides = ({
-  interests,
-  setShowNotes,
-}: {
-  interests: Interest[];
-  setShowNotes: (show: boolean) => void;
-}) => {
+const Slides = ({ interests }: { interests: Interest[] }) => {
   const [currImgIndex, setCurrImgIndex] = useState(0);
 
   const goToPreviousImg: () => void = () => {
@@ -64,7 +61,6 @@ const Slides = ({
               interest={interest}
               index={index}
               currImgIndex={currImgIndex}
-              setShowNotes={setShowNotes}
             />
           </>
         ))}
@@ -87,26 +83,40 @@ const InterestsText = ({
   interest,
   index,
   currImgIndex,
-  setShowNotes,
 }: {
   interest: Interest;
   index: number;
   currImgIndex: number;
-  setShowNotes: (show: boolean) => void;
 }) => {
+  const { api: {setShowNotes} } = useAppContext();
+  
+  let setShowAnimation: (show: boolean) => void = (show: boolean) => null;
+
   let addClassName = '';
   switch (interest.title) {
     case InterestType.Musicals:
       addClassName = 'music';
+      setShowAnimation = (show: boolean) => setShowNotes(show);
       break;
     case InterestType.Violin:
+      setShowAnimation = (show: boolean) => setShowNotes(show);
       addClassName = 'music';
       break;
     case InterestType.ClassicalMusic:
+      setShowAnimation = (show: boolean) => setShowNotes(show);
       addClassName = 'music';
+      break;
+    case InterestType.Food:
+      addClassName = 'food';
       break;
     case InterestType.Cats:
       addClassName = 'cat';
+      break;
+    case InterestType.Traveling:
+      addClassName = 'traveling';
+      break;
+    case InterestType.Poems:
+      addClassName = 'poems';
       break;
     default:
       break;
@@ -118,8 +128,8 @@ const InterestsText = ({
     >
       <div
         className={`interest-text-title ${addClassName}`}
-        onMouseEnter={() => setShowNotes(true)}
-        onMouseLeave={() => setShowNotes(false)}
+        onMouseEnter={() => setShowAnimation(true)}
+        onMouseLeave={() => setShowAnimation(false)}
       >
         {interest.title}
       </div>

@@ -48,7 +48,7 @@ export const Content = ({
     <div className='project-detail-content-window'>
       {projectDetails.map(
         (projectDetail, index) => {
-          if (projectDetail.text2) {
+          if (projectDetail.title2) {
             return (
               <TextTextWindow
                 key={`textText-${index}`}

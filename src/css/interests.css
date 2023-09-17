@@ -135,3 +135,12 @@
 .interest-text-title.cat:hover {
   cursor: url('cursor-cat.svg'), auto;
 }
+.interest-text-title.food:hover {
+  cursor: url('cursor-cake.svg'), auto;
+}
+.interest-text-title.traveling:hover {
+  cursor: url('cursor-travel.svg'), auto;
+}
+.interest-text-title.poems:hover {
+  cursor: url('cursor-poem.svg'), auto;
+}

@@ -4,12 +4,14 @@ type state = {
   showMenu: boolean;
   changeWidth: boolean;
   currPage: string;
+  showNotes: boolean;
 };
 
 const initialState: state = {
   showMenu: false,
   changeWidth: false,
   currPage: '/~zw4021/',
+  showNotes: false,
 };
 
 export const AppContext = createContext<state | null>(null);
@@ -32,6 +34,11 @@ function appReducer(state: state, action: { type: string; payload: any }) {
         ...state,
         currPage: action.payload,
       };
+    case 'CHANGE_SHOW_NOTE':
+      return {
+        ...state,
+        showNotes: action.payload,
+      }
     default:
       return state;
   }
@@ -69,12 +76,17 @@ export function useAppContext() {
     dispatch({ type: 'CHANGE_CURR_PAGE', payload: currPage });
   };
 
+  const setShowNotes = (showNotes: boolean) => {
+    dispatch({ type: 'CHANGE_SHOW_NOTE', payload: showNotes });
+  };
+
   return {
     state,
     api: {
       setShowMenu,
       setChangeWidth,
       setCurrPage,
+      setShowNotes
     },
   };
 }
