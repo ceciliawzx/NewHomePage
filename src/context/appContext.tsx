@@ -5,6 +5,7 @@ type state = {
   changeWidth: boolean;
   currPage: string;
   showNotes: boolean;
+  showPoems: boolean;
 };
 
 const initialState: state = {
@@ -12,6 +13,7 @@ const initialState: state = {
   changeWidth: false,
   currPage: '/~zw4021/',
   showNotes: false,
+  showPoems: false,
 };
 
 export const AppContext = createContext<state | null>(null);
@@ -34,10 +36,15 @@ function appReducer(state: state, action: { type: string; payload: any }) {
         ...state,
         currPage: action.payload,
       };
-    case 'CHANGE_SHOW_NOTE':
+    case 'CHANGE_SHOW_NOTES':
       return {
         ...state,
         showNotes: action.payload,
+      }
+    case 'CHANGE_SHOW_POEMS':
+      return {
+        ...state,
+        showPoems: action.payload,
       }
     default:
       return state;
@@ -77,7 +84,10 @@ export function useAppContext() {
   };
 
   const setShowNotes = (showNotes: boolean) => {
-    dispatch({ type: 'CHANGE_SHOW_NOTE', payload: showNotes });
+    dispatch({ type: 'CHANGE_SHOW_NOTES', payload: showNotes });
+  };
+  const setShowPoems = (showPoems: boolean) => {
+    dispatch({ type: 'CHANGE_SHOW_POEMS', payload: showPoems });
   };
 
   return {
@@ -86,7 +96,8 @@ export function useAppContext() {
       setShowMenu,
       setChangeWidth,
       setCurrPage,
-      setShowNotes
+      setShowNotes,
+      setShowPoems
     },
   };
 }

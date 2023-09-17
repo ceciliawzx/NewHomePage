@@ -1,0 +1,109 @@
+.poem-1,
+.poem-2,
+.poem-3,
+.poem-4,
+.poem-5,
+.poem-6,
+.poem-7,
+.poem-8 {
+  position: absolute;
+  animation: poems 2500ms infinite linear;
+  font-family: 'XingKai';
+  text-shadow: 2px 2px 2px black;
+  font-size: 30px;
+  opacity: 0;
+}
+
+.poem-1 {
+  top: 60px;
+  left: 0;
+  animation-delay: 0.5s;
+  color: rgb(255, 255, 255);
+}
+
+.poem-2 {
+  top: 60%;
+  left: 10%;
+  animation-delay: 1s;
+  animation-duration: 2700ms;
+  font-size: 35px;
+  color: rgb(237, 121, 121);
+}
+
+.poem-3 {
+  top: 100%;
+  left: 30%;
+  animation-delay: 1.5s;
+  font-size: 15px;
+  animation-duration: 2300ms;
+  color: rgb(205, 203, 203);
+}
+
+.poem-4 {
+  top: 90%;
+  left: 40%;
+  animation-delay: 2s;
+  color: rgb(198, 145, 145);
+}
+
+.poem-5 {
+  top: 20%;
+  left: 50%;
+  animation-delay: 2.2s;
+  font-size: 20px;
+  color: rgb(204, 90, 90);
+}
+
+.poem-6 {
+  top: 70%;
+  left: 70%;
+  animation-delay: 2.5s;
+  color: rgb(205, 170, 170);
+}
+
+.poem-7 {
+  top: 40%;
+  left: 85%;
+  animation-delay: 3s;
+  font-size: 20px;
+  color: rgb(157, 93, 93);
+}
+
+.poem-8 {
+  top: 70%;
+  left: 100%;
+  animation-delay: 0.5s;
+  font-size: 35px;
+  animation-duration: 3000ms;
+  color: rgb(227, 173, 173);
+}
+
+@keyframes poems {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0.8;
+    transform: scale(1.3) translateY(-30%);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translateY(-50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.4) translateY(-100%);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: 'XingKai';
+  src: url('../../../public/XingKai.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

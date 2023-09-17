@@ -1,10 +1,10 @@
-#floating-notes {
+#floating-window {
   display: block;
   margin: auto;
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 60%;
+  width: 70%;
   height: 50%;
   min-width: 300px;
   border: 0px solid white;
@@ -34,7 +34,7 @@
 }
 
 .note-2 {
-  top: 20%;
+  top: 60%;
   left: 30%;
   animation-delay: 1s;
   color: rgb(248, 162, 228);
