@@ -17,6 +17,8 @@ export type ProjectDetail = {
   title: string;
   text: string;
   imgLink?: string;
+  title2?: string;
+  text2?: string;
 }
 
 export type Interest = {

@@ -5,7 +5,7 @@ import { HomePage } from './view/HomePage';
 import { Projects } from './view/Projects';
 import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
-import { DrpDetail } from './projects/DRP';
+import { DrpDetail, WaccDetail, PintosDetail } from './projects/details';
 import { mainUrl, projectUrl, interestUrl, contactUrl } from './util/data';
 
 import AOS from 'aos';
@@ -64,7 +64,8 @@ function App() {
             <Route path={interestUrl} element={<Interests />} />
             <Route path={contactUrl} element={<Contact />} />
             <Route path={`${projectUrl}drp`} element={<DrpDetail />} />
-            <Route path={`${projectUrl}wacc`} element={<DrpDetail />} />
+            <Route path={`${projectUrl}wacc`} element={<WaccDetail />} />
+            <Route path={`${projectUrl}pintos`} element={<PintosDetail />} />
           </Routes>
         </div>
       </Router>
