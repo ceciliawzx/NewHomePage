@@ -6,7 +6,7 @@ import { Projects } from './view/Projects';
 import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
 import { DrpDetail, WaccDetail, PintosDetail } from './projects/details';
-import { mainUrl, projectUrl, interestUrl, contactUrl } from './util/data';
+import { mainUrl, projectUrl, interestUrl, contactUrl } from './data/data';
 
 import AOS from 'aos';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';

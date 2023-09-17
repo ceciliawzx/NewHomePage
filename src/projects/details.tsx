@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectInDetail } from './projects-util';
-import { DRP, WACC, Pintos } from '../util/data';
+import { DRP, WACC, Pintos } from '../data/projects';
 
 export const DrpDetail = () => {
   return <ProjectInDetail project={DRP} />;

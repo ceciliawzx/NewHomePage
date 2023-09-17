@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Project, Technology } from '../util/types';
-import { projects } from '../util/data';
+import { projects } from '../data/projects';
 import { getTechColor } from '../util/util';
 import { useAppContext } from '../context/appContext';
 import '../css/projects.css';

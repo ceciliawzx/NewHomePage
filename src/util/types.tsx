@@ -35,6 +35,7 @@ export enum InterestType {
   Traveling = 'Traveling',
   Cats = 'Cats',
   Poems = 'Poems',
+  Food = 'Food',
 }
 
 export type SocialMedia = {

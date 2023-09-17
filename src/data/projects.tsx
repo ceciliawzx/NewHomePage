@@ -1,37 +1,5 @@
-import {
-  Project,
-  Technology,
-  MenuItem,
-  Interest,
-  InterestType,
-  SocialMedia,
-  SocialMediaType,
-  ProjectDetail,
-} from '../util/types';
-
-export const mainUrl = '/~zw4021/';
-export const projectUrl = `${mainUrl}projects/`;
-export const interestUrl = `${mainUrl}interests/`;
-export const contactUrl = `${mainUrl}contact/`;
-
-export const menuItems: MenuItem[] = [
-  {
-    text: 'HOME',
-    pageLink: mainUrl,
-  },
-  {
-    text: 'PROJECTS',
-    pageLink: projectUrl,
-  },
-  {
-    text: 'INTERESTS',
-    pageLink: interestUrl,
-  },
-  {
-    text: 'CONTACT',
-    pageLink: contactUrl,
-  },
-];
+import { Project, Technology } from '../util/types';
+import { projectUrl } from './data';
 
 export const DRP: Project = {
   title: 'DRP',
@@ -136,8 +104,7 @@ export const Pintos: Project = {
     We worked on a simple OS framework for 80*86 architecture that supports kernel threads, 
     loading and running user programs, and a file system. 
     Our objectives was to strengthen these areas and add a virtual memory implementation. 
-    We faced challenges like concurrency, memory leak and data structure design, 
-    but also learned a lot about C language and the overall operating system.`,
+    We faced challenges like concurrency, memory leak and data structure design, but also learned a lot about C language and the overall operating system.`,
       imgLink: `${projectUrl}pintos.jpg`,
     },
   ],
@@ -146,56 +113,3 @@ export const Pintos: Project = {
 };
 
 export const projects: Project[] = [DRP, WACC, Pintos];
-
-export const interests: Interest[] = [
-  {
-    title: InterestType.ClassicalMusic,
-    intro: `"Music is art decorating time."`,
-    description: `I started playing violin when I was 6 years old.
-    Despite the lackness of practice, I'm still playing it anyways.
-    My favourite composers are Debussy, Sibelius and Tchaikovsky. 
-    I play in IC Sinfonietta and IC String Ensemble. 
-    `,
-    imgLink: `${interestUrl}music-score.jpg`,
-  },
-  {
-    title: InterestType.Cats,
-    intro: `As you might have found out, I love cats.`,
-    description: `I've had many cats in my life, and I used to have 7 cats at the same time.
-    I only have one now, her name is Chloe.
-    I wish she could be happier and healthier than any other cats I had before. `,
-    imgLink: `${interestUrl}cat.jpg`,
-  },
-  {
-    title: InterestType.Musicals,
-    intro: `"Measure your life in love."`,
-    description: `My favourite musical is Les Miserables. 
-    I also love Phantom of the Opera, Hamilton, Cats, Elisabeth, 
-    Rent, Mozart!, Mozart l'opéra rock, Le Rouge et le Noir and so on...`,
-    imgLink: `${interestUrl}musical.jpg`,
-  },
-  {
-    title: InterestType.Poems,
-    intro: `『曾批给雨支风券，累上留云借月章。』`,
-    description: `"Shall I compare thee to a summer's day?"`,
-    imgLink: `${interestUrl}poem.jpg`,
-  },
-];
-
-export const socialMedias: SocialMedia[] = [
-  {
-    type: SocialMediaType.Email,
-    data: 'zixiwangcecilia@gmail.com',
-    imgLink: `${mainUrl}icon/email.png`,
-  },
-  {
-    type: SocialMediaType.Wechat,
-    data: 'wechat',
-    imgLink: `${mainUrl}wechat.jpg`,
-  },
-  {
-    type: SocialMediaType.LinkedIn,
-    data: 'zixi-wang-cecilia',
-    imgLink: `${mainUrl}icon/linkedin.png`,
-  },
-];

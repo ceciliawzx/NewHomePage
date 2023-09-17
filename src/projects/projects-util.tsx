@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../css/style.css';
 import '../css/project-detail.css';
-import { projectUrl } from '../util/data';
+import { projectUrl } from '../data/data';
 import { Project, ProjectDetail } from '../util/types';
 import { useAppContext } from '../context/appContext';
 

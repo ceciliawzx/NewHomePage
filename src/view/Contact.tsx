@@ -1,8 +1,8 @@
 import React, { useState, ChangeEvent } from 'react';
 import { SocialMedia, SocialMediaType } from '../util/types';
-import { socialMedias } from '../util/data';
+import { socialMedias } from '../data/social-medias';
 import '../css/contact.css';
-import { mainUrl } from '../util/data';
+import { mainUrl } from '../data/data';
 
 export const Contact = () => {
   return (
@@ -138,8 +138,8 @@ const MessageForm = () => {
         Body: `${emailData.name} connected to you over your website:\n${emailData.message}`,
       };
       // @ts-ignore
-      window.Email.send(config).then(
-        (message: string) => alert(`${message == 'OK' ? 'Message sent successfully' : message}`),
+      window.Email.send(config).then((message: string) =>
+        alert(`${message == 'OK' ? 'Message sent successfully' : message}`)
       );
     }
   };

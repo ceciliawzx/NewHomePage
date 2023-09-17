@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Interest, InterestType } from '../util/types';
-import { interests } from '../util/data';
+import { interests } from '../data/interests';
 import '../css/interests.css';
 import '../css/notes.css';
 
@@ -8,7 +8,7 @@ export const Interests = () => {
   const [showNotes, setShowNotes] = useState(false);
 
   return (
-    <div className='window-main' style={{backgroundColor: 'black'}}>
+    <div className='window-main' style={{ backgroundColor: 'black' }}>
       <Slides interests={interests} setShowNotes={setShowNotes} />
       {showNotes && <Notes />}
     </div>

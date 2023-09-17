@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/style.css';
-import { menuItems } from '../util/data';
+import { menuItems } from '../data/menu';
 import '../css/menu.css';
 import { useAppContext } from '../context/appContext';
 

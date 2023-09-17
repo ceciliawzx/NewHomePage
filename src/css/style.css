@@ -23,6 +23,17 @@
   left: 0;
 }
 
+#side-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 99.9%;
+  width: 0.1%; /* Adjust the width as needed */
+  background-color:  gray;
+}
+
+
 @keyframes shooting-star-animate {
   0% {
     transform: rotate(315deg) translateX(0);
