@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/~zw4021/static/css/main.93cee9cb.css",
-    "main.js": "/~zw4021/static/js/main.cd9972c6.js",
+    "main.css": "/~zw4021/static/css/main.3d8291ac.css",
+    "main.js": "/~zw4021/static/js/main.41a36539.js",
     "index.html": "/~zw4021/index.html",
     "static/media/cursor-note.svg": "/~zw4021/static/media/cursor-note.035f763abd40b9361c98.svg",
+    "static/media/cursor-cake.svg": "/~zw4021/static/media/cursor-cake.9a4dbd42cd0a236d3cf8.svg",
     "static/media/cursor-cat.svg": "/~zw4021/static/media/cursor-cat.1684ca4eaf801cd8f34b.svg",
-    "main.93cee9cb.css.map": "/~zw4021/static/css/main.93cee9cb.css.map",
-    "main.cd9972c6.js.map": "/~zw4021/static/js/main.cd9972c6.js.map"
+    "static/media/cursor-poem.svg": "/~zw4021/static/media/cursor-poem.ffe1e27add27b9d192ff.svg",
+    "static/media/cursor-travel.svg": "/~zw4021/static/media/cursor-travel.846fcf948e7278f85d87.svg",
+    "main.3d8291ac.css.map": "/~zw4021/static/css/main.3d8291ac.css.map",
+    "main.41a36539.js.map": "/~zw4021/static/js/main.41a36539.js.map"
   },
   "entrypoints": [
-    "static/css/main.93cee9cb.css",
-    "static/js/main.cd9972c6.js"
+    "static/css/main.3d8291ac.css",
+    "static/js/main.41a36539.js"
   ]
 }

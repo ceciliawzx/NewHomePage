@@ -2,7 +2,6 @@ import React, { useState, ChangeEvent } from 'react';
 import { SocialMedia, SocialMediaType } from '../util/types';
 import { socialMedias } from '../data/social-medias';
 import '../css/contact.css';
-import { mainUrl } from '../data/data';
 
 export const Contact = () => {
   return (
@@ -139,7 +138,7 @@ const MessageForm = () => {
       };
       // @ts-ignore
       window.Email.send(config).then((message: string) =>
-        alert(`${message == 'OK' ? 'Message sent successfully' : message}`)
+        alert(`${message === 'OK' ? 'Message sent successfully' : message}`)
       );
     }
   };

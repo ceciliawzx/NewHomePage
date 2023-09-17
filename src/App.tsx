@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useReducer } from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
 import { Menu } from './view/Menu';
 import { HomePage } from './view/HomePage';
 import { Projects } from './view/Projects';
