@@ -40,9 +40,14 @@
 }
 
 .project-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-img-container {
   height: 350px;
   width: 85%;
-  object-fit: cover;
   overflow: hidden;
   border-radius: 5%;
   box-shadow: 5px 5px 10px #000;
@@ -50,7 +55,7 @@
   cursor: pointer;
 }
 
-.project-img:hover {
+.project-img-container:hover {
   width: 90%;
   height: 370px;
 }

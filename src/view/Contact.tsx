@@ -79,7 +79,7 @@ const Email = ({ link }: { link: string }) => {
       <div
         style={{
           wordWrap: 'break-word',
-          whiteSpace: 'pre-wrap',
+          whiteSpace: 'pre',
         }}
       >
         {link}

@@ -8,10 +8,16 @@ export type Project = {
   time: string;
   technologies?: Technology[];
   description: string;
-  detail?: string;
+  projectDetails: ProjectDetail[];
   imgLink: string;
   pageLink?: string;
 };
+
+export type ProjectDetail = {
+  title: string;
+  text: string;
+  imgLink?: string;
+}
 
 export type Interest = {
   title: InterestType;

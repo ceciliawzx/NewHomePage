@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Project, Technology } from '../util/types';
 import { projects } from '../util/data';
 import { getTechColor } from '../util/util';
+import { useAppContext } from '../context/appContext';
 import '../css/projects.css';
 
 export const Projects = () => {
@@ -35,7 +36,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div data-aos='fade-up'>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <img className='project-img' src={project.imgLink} />
+        <a className='project-img-container' href={project.pageLink}>
+          <img className='project-img' src={project.imgLink} />
+        </a>
       </div>
       <div style={{ textAlign: 'center' }}>
         <p
