@@ -130,17 +130,17 @@
 }
 
 .interest-text-title.music:hover {
-  cursor: url('cursor-note.svg'), auto;
+  cursor: url('../../public/cursor/cursor-note.svg'), auto;
 }
 .interest-text-title.cat:hover {
-  cursor: url('cursor-cat.svg'), auto;
+  cursor: url('../../public/cursor/cursor-cat.svg'), auto;
 }
 .interest-text-title.food:hover {
-  cursor: url('cursor-cake.svg'), auto;
+  cursor: url('../../public/cursor/cursor-cake.svg'), auto;
 }
 .interest-text-title.traveling:hover {
-  cursor: url('cursor-travel.svg'), auto;
+  cursor: url('../../public/cursor/cursor-travel.svg'), auto;
 }
 .interest-text-title.poems:hover {
-  cursor: url('cursor-poem.svg'), auto;
+  cursor: url('../../public/cursor/cursor-poem.svg'), auto;
 }

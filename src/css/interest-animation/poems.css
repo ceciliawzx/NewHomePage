@@ -10,7 +10,7 @@
   animation: poems 2500ms infinite linear;
   font-family: 'XingKai';
   text-shadow: 2px 2px 2px black;
-  font-size: 30px;
+  font-size: 90%;
   opacity: 0;
 }
 
@@ -26,7 +26,7 @@
   left: 10%;
   animation-delay: 1s;
   animation-duration: 2700ms;
-  font-size: 35px;
+  font-size: 120%;
   color: rgb(237, 121, 121);
 }
 
@@ -50,7 +50,7 @@
   top: 20%;
   left: 50%;
   animation-delay: 2.2s;
-  font-size: 20px;
+  font-size: 70%;
   color: rgb(204, 90, 90);
 }
 
@@ -65,7 +65,7 @@
   top: 40%;
   left: 85%;
   animation-delay: 3s;
-  font-size: 20px;
+  font-size: 80%;
   color: rgb(157, 93, 93);
 }
 
@@ -73,7 +73,7 @@
   top: 70%;
   left: 100%;
   animation-delay: 0.5s;
-  font-size: 35px;
+  font-size: 130%;
   animation-duration: 3000ms;
   color: rgb(227, 173, 173);
 }
