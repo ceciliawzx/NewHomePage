@@ -35,9 +35,6 @@ const Photo = ({ bgUrl }: { bgUrl: string }) => {
         className='photo-entry'
         style={{
           backgroundImage: `url(${bgUrl})`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
         }}
       ></div>
     </div>
