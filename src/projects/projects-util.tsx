@@ -5,11 +5,11 @@ import { projectUrl } from '../data/data';
 import { Project, ProjectDetail } from '../util/types';
 import { useAppContext } from '../context/appContext';
 
-
 export const ProjectInDetail = ({ project }: { project: Project }) => {
   const {
     api: { setCurrPage },
   } = useAppContext();
+
   useEffect(() => {
     setCurrPage(projectUrl);
   }, []);
@@ -46,32 +46,30 @@ export const Content = ({
 }) => {
   return (
     <div className='project-detail-content-window'>
-      {projectDetails.map(
-        (projectDetail, index) => {
-          if (projectDetail.title2) {
-            return (
-              <TextTextWindow
-                key={`textText-${index}`}
-                projectDetail={projectDetail}
-              />
-            );
-          } else if (index % 2 === 0) {
-            return (
-              <TextPictureWindow
-                key={`textPicture-${index}`}
-                projectDetail={projectDetail}
-              />
-            );
-          } else {
-            return (
-              <PictureTextWindow
-                key={`pictureText-${index}`}
-                projectDetail={projectDetail}
-              />
-            );
-          }
+      {projectDetails.map((projectDetail, index) => {
+        if (projectDetail.title2) {
+          return (
+            <TextTextWindow
+              key={`textText-${index}`}
+              projectDetail={projectDetail}
+            />
+          );
+        } else if (index % 2 === 0) {
+          return (
+            <TextPictureWindow
+              key={`textPicture-${index}`}
+              projectDetail={projectDetail}
+            />
+          );
+        } else {
+          return (
+            <PictureTextWindow
+              key={`pictureText-${index}`}
+              projectDetail={projectDetail}
+            />
+          );
         }
-      )}
+      })}
     </div>
   );
 };

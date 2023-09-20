@@ -36,7 +36,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div data-aos='fade-up'>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Link className='project-img-container' to={project.pageLink}>
+        <Link
+          className='project-img-container'
+          to={project.pageLink}
+          onClick={() => window.scrollTo(0, 0)}
+        >
           <img className='project-img' src={project.imgLink} />
         </Link>
       </div>

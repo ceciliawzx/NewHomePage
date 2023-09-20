@@ -4,14 +4,17 @@ import { HomePage } from './view/HomePage';
 import { Projects } from './view/Projects';
 import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
-import { DrpDetail, WaccDetail, PintosDetail } from './projects/details';
 import { mainUrl, projectUrl, interestUrl, contactUrl } from './data/data';
+import { interests } from './data/interests';
+import { projects } from './data/projects';
 
 import AOS from 'aos';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useAppContext } from './context/appContext';
 import 'aos/dist/aos.css';
 import './css/style.css';
+import { InterestDetail } from './interests/interests-util';
+import { ProjectInDetail } from './projects/projects-util';
 
 function App() {
   const {
@@ -62,9 +65,18 @@ function App() {
             <Route path={projectUrl} element={<Projects />} />
             <Route path={interestUrl} element={<Interests />} />
             <Route path={contactUrl} element={<Contact />} />
-            <Route path={`${projectUrl}drp`} element={<DrpDetail />} />
-            <Route path={`${projectUrl}wacc`} element={<WaccDetail />} />
-            <Route path={`${projectUrl}pintos`} element={<PintosDetail />} />
+            {projects.map((project, i) => (
+              <Route
+                path={project.pageLink}
+                element={<ProjectInDetail project={project} />}
+              />
+            ))}
+            {interests.map((interest, i) => (
+              <Route
+                path={interest.detailLink}
+                element={<InterestDetail photoUrls={interest.photos} />}
+              />
+            ))}
           </Routes>
         </div>
       </Router>

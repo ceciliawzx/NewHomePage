@@ -11,6 +11,8 @@ export const interests: Interest[] = [
     I play in IC Sinfonietta and IC String Ensemble. 
     `,
     imgLink: `${interestUrl}music-score.jpg`,
+    detailLink: `${interestUrl}classical-music`,
+    photos: ['../bg/contact-bg.png', '../bg/contact-bg.png', '../bg/contact-bg.png', '../bg/contact-bg.png'],
   },
   {
     title: InterestType.Cats,
@@ -19,6 +21,8 @@ export const interests: Interest[] = [
     I only have one now, her name is Chloe.
     I wish she could be happier and healthier than any other cats I had before. `,
     imgLink: `${interestUrl}cat.jpg`,
+    detailLink: `${interestUrl}cats`,
+    photos: [],
   },
   {
     title: InterestType.Musicals,
@@ -27,23 +31,31 @@ export const interests: Interest[] = [
     I also love Phantom of the Opera, Hamilton, Cats, Elisabeth, 
     Rent, Mozart!, Mozart l'opéra rock, Le Rouge et le Noir and so on...`,
     imgLink: `${interestUrl}musical.jpg`,
+    detailLink: `${interestUrl}musicals`,
+    photos: [],
   },
   {
     title: InterestType.Poems,
     intro: `『曾批给雨支风券，累上留云借月章。』`,
     description: `"Shall I compare thee to a summer's day?"`,
     imgLink: `${interestUrl}poem.jpg`,
+    detailLink: `${interestUrl}poems`,
+    photos: [],
   },
   {
     title: InterestType.Traveling,
     intro: `Read ten thousand books, travel ten thousand miles.`,
     description: `I love traveling.`,
-    imgLink: `${interestUrl}traveling.jpg`
+    imgLink: `${interestUrl}traveling.jpg`,
+    detailLink: `${interestUrl}traveling`,
+    photos: [],
   },
   {
     title: InterestType.Food,
     intro: `Live for love and love for food.`,
     description: ``,
     imgLink: `${interestUrl}food.jpg`,
+    detailLink: `${interestUrl}food`,
+    photos: [],
   },
 ];

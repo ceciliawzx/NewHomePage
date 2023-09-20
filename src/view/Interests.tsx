@@ -5,6 +5,7 @@ import '../css/interests.css';
 import '../css/interest-animation/notes.css';
 import '../css/interest-animation/poems.css';
 import { useAppContext } from '../context/appContext';
+import { Link } from 'react-router-dom';
 
 export const Interests = () => {
   const {
@@ -138,7 +139,13 @@ const InterestsText = ({
       >
         {interest.title}
       </div>
-      <div className='interest-text-intro'>{interest.intro}</div>
+      <Link
+        className='interest-text-intro'
+        to={interest.detailLink}
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        {interest.intro}
+      </Link>
     </div>
   );
 };

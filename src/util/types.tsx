@@ -21,11 +21,14 @@ export type ProjectDetail = {
   text2?: string;
 }
 
+
 export type Interest = {
   title: InterestType;
   intro: string;
   description?: string;
   imgLink: string;
+  detailLink: string;
+  photos: string[];
 };
 
 export enum InterestType {

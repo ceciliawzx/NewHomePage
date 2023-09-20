@@ -70,7 +70,10 @@ const MenuItems = () => {
                   currPage === item.pageLink ? 'rgb(167 157 243)' : 'inherit'
                 }`,
               }}
-              onClick={() => setCurrPage(item.pageLink)}
+              onClick={() => {
+                setCurrPage(item.pageLink);
+                window.scrollTo(0, 0);
+              }}
             >
               {item.text}
             </Link>

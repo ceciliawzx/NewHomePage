@@ -58,4 +58,5 @@
 .project-img-container:hover {
   width: 90%;
   height: 370px;
+  box-shadow: 10px 10px 15px #000;
 }
