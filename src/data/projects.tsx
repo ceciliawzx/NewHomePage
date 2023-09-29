@@ -20,8 +20,8 @@ export const DRP: Project = {
     {
       title: `Initial Research`,
       text: `    Food waste has always been a serious problem in the world. 
-    We interviewed 32 young adults and found that 29 of them have the problem of wasting food. The reasons most frequently mentioned were that they bought too much food and that they forgot what they had in the fridge.
-    Therefore, we wanted to design a fridge management app. This would help the users to track the expiration date of food in fridges and promote use before expriation date.`,
+    We interviewed 32 young adults and found that 29 of them have the problem of wasting food. The reasons mentioned most frequently were that they bought too much food and that they forgot what they had in the fridge.
+    Therefore, we wanted to design a fridge management app. This would help the users to track the expiration date of food in fridges and promote use before expiration date.`,
       imgLink: `${projectUrl}drp/drp-current-journey.png`,
     },
     {

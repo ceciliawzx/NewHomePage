@@ -61,8 +61,7 @@ const Profile = ({
           I'm currently a 3rd year UG in Imperial College London, Department of
           Computing.
           <br />
-          "We can only see a short distance ahead, but we can see plenty there
-          that needs to be done."
+          "Your best and wisest refuge from all troubles is in your science."
         </p>
         <a href='./files/CV.pdf' target='_blank' id='download_cv_btn'>
           Download Resume &gt;

@@ -132,9 +132,9 @@ const MessageForm = () => {
       const config = {
         SecureToken: '8326cf45-b68c-441a-85db-67856aba0f51',
         To: 'ceciliawzx@qq.com',
-        From: emailData.email,
+        From: 'zixiwangcecilia@gmail.com',
         Subject: emailData.subject,
-        Body: `${emailData.name} connected to you over your website:\n${emailData.message}`,
+        Body: `${emailData.name} ${emailData.email} connected to you over your website: \n${emailData.message}`,
       };
       // @ts-ignore
       window.Email.send(config).then((message: string) =>

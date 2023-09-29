@@ -13,10 +13,10 @@ export const interests: Interest[] = [
     imgLink: `${interestUrl}music-score.jpg`,
     detailLink: `${interestUrl}classical-music`,
     photos: [
-      '../bg/contact-bg.png',
-      '../bg/contact-bg.png',
-      '../bg/contact-bg.png',
-      '../bg/contact-bg.png',
+      '../interests/classicalMusic/classicalMusic1.jpeg',
+      '../interests/classicalMusic/classicalMusic2.webp',
+      '../interests/classicalMusic/classicalMusic3.jpeg',
+      '../interests/classicalMusic/classicalMusic4.webp'
     ],
   },
   {
@@ -92,7 +92,12 @@ export const interests: Interest[] = [
     description: `"Shall I compare thee to a summer's day?"`,
     imgLink: `${interestUrl}poem.jpg`,
     detailLink: `${interestUrl}poems`,
-    photos: [],
+    photos: [
+      '../interests/poem/poem1.jpeg',
+      '../interests/poem/poem2.jpeg',
+      '../interests/poem/poem3.jpeg',
+      '../interests/poem/poem4.jpeg',
+    ],
   },
   {
     title: InterestType.Traveling,
@@ -129,6 +134,15 @@ export const interests: Interest[] = [
     description: ``,
     imgLink: `${interestUrl}food.jpg`,
     detailLink: `${interestUrl}food`,
-    photos: [],
+    photos: [
+      '../interests/food/food1.jpg',
+      '../interests/food/food2.jpg',
+      '../interests/food/food3.jpg',
+      '../interests/food/food4.jpg',
+      '../interests/food/food5.jpg',
+      '../interests/food/food6.jpg',
+      '../interests/food/food7.jpg',
+      '../interests/food/food8.jpg',
+    ],
   },
 ];
