@@ -4,7 +4,7 @@ import { HomePage } from './view/HomePage';
 import { Projects } from './view/Projects';
 import { Interests } from './view/Interests';
 import { Contact } from './view/Contact';
-import { mainUrl, projectUrl, interestUrl, contactUrl } from './data/data';
+import { mainUrl, projectUrl, interestUrl, contactUrl, notesUrl } from './data/data';
 import { interests } from './data/interests';
 import { projects } from './data/projects';
 
@@ -65,6 +65,7 @@ function App() {
             <Route path={projectUrl} element={<Projects />} />
             <Route path={interestUrl} element={<Interests />} />
             <Route path={contactUrl} element={<Contact />} />
+            <Route path={notesUrl} element={<Contact />} />
             {projects.map((project, i) => (
               <Route
                 path={project.pageLink}

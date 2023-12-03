@@ -134,9 +134,8 @@ export const Pintos: Project = {
     {
       title: 'Introduction',
       text: `    Pintos was a group project in 2nd year. 
-    We worked on a simple OS framework for 80*86 architecture that supports kernel threads, 
-    loading and running user programs, and a file system. 
-    Our objectives was to strengthen these areas and add a virtual memory implementation. 
+    We worked on a simple OS framework for 80*86 architecture that supports kernel threads, loading and running user programs, and a file system. 
+    Our objective was to strengthen these areas and add a virtual memory implementation. 
     We faced challenges like concurrency, memory leak and data structure design, but also learned a lot about C language and the overall operating system.
     (Due to the fact that it was the first big project in our uni lives, and it was so hard, everyone got a pintos glass as souvenirs.)`,
       imgLink: `${projectUrl}pintos.jpg`,
@@ -169,4 +168,41 @@ export const Pintos: Project = {
   pageLink: `${projectUrl}pintos`,
 };
 
-export const projects: Project[] = [DRP, WACC, Pintos];
+export const EventMaster: Project = {
+  title: 'EventMaster',
+  time: 'Nov 2023',
+  technologies: [Technology.JavaScript, Technology.ReactNative, Technology.AWSAmplify, Technology.WordPress],
+  description: 'We implemented this application for a FitchGroup Codeathon 2023, and we won it. We mainly used JavaScript, AWS Amplify, and integrated with WordPress and Paypal features.',
+  projectDetails: [
+    {
+      title: 'Introduction',
+      text: `    We implemented this application when attending the FitchGroup Codeathon 2023, and this application was aiming to help the charity Friends of Bulgaria. 
+    This application allowed users to see events update in the mobile phones once the database in WordPress is updated, and register and pay for the event. 
+    After successful payment, both the user and the organizer will receive a confirmation email. We used React Native to ensure the application can run in both IOS and Android platforms. `,
+      imgLink: `${projectUrl}eventMaster/eventMaster-profileImg.jpg`
+    },
+    {
+      title: 'Day 1',
+      text: `    We met quite a lot of challenges. This was our first codeathon ever, and no one had experience of AWS before, not even everyone had experience for front end before. 
+    And even the wifi wasn't working for everyone. But we started the project anyways. 
+    Given that we only had two days in total, we split into two smaller groups to ensure efficiency. 
+    On the first day, the front end group implemented the main layout for home page and register page, while the back end group struggled to learn about WordPress and Paypal from scratch. 
+    In the midnight of the first day, we finally managed to create a mock WordPress website using lightsail, and connected the front end to is by accessing the endpoint api.`,
+      title2: 'Day 2',
+      text2: `    On average everyone slept for 3 hours that night, but we still managed to continue working. 
+    On day 2, we switched tasks between the two groups to ensure everyone can learn something new. 
+    We integrated Paypal and email-sending features to our application, and also added a page for introduction.
+    We then made a slide and a video to show our outcome, and we won. It was very exciting as it was our first codeathon.`
+    },
+    {
+      title: 'Conclusion',
+      text: `    It was a great experience, not just because we won it (and everyone got an iPad), but also because but also because the codeathon was aiming to help the charity.
+    And the fact that everyone had different experiences before made it possible for us to implement a complete application within two days, reinforcing my love for teamwork.`,
+      imgLink: `${projectUrl}eventMaster/eventMaster-demo.png`
+    }
+  ],
+  imgLink: `${projectUrl}eventMaster/eventMaster-profileImg.jpg`,
+  pageLink: `${projectUrl}eventMaster`,
+}
+
+export const projects: Project[] = [EventMaster, DRP, WACC, Pintos];

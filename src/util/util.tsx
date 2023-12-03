@@ -10,6 +10,10 @@ export function getTechColor(technology: Technology) {
         case Technology.MySql: return '#F3C5C5';
         case Technology.OS: return '#98EECC';
         case Technology.Scala: return '#E5B299';
+        case Technology.AWSAmplify: return '#9DFFF9';
+        case Technology.JavaScript: return '#1AFFD5';
+        case Technology.ReactNative: return '#C9E4CA';
+        case Technology.WordPress: return '#D4DCFF'; 
         default: return '#fff';
     };
 }

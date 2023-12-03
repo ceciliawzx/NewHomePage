@@ -19,8 +19,7 @@ export type ProjectDetail = {
   imgLink?: string;
   title2?: string;
   text2?: string;
-}
-
+};
 
 export type Interest = {
   title: InterestType;
@@ -42,7 +41,7 @@ export enum InterestType {
 }
 
 export type SocialMedia = {
-  type: SocialMediaType
+  type: SocialMediaType;
   data: string;
   imgLink: string;
 };
@@ -51,7 +50,7 @@ export enum SocialMediaType {
   Wechat = 'Wechat',
   Email = 'Email',
   LinkedIn = 'LinkedIn',
-  WhatsApp = 'WhatsApp'
+  WhatsApp = 'WhatsApp',
 }
 
 export enum Technology {
@@ -66,4 +65,12 @@ export enum Technology {
   Firebase = 'Firebase',
   Compiler = 'Compiler',
   OS = 'OS',
+  AWSAmplify = 'AWS Amplify',
+  React = 'React',
+  JavaScript = 'JavaScript',
+  TypeScript = 'TypeScript',
+  Spring = 'Spring',
+  ReactNative = 'React Native',
+  WordPress = 'WordPress',
+  
 }
