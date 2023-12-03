@@ -179,7 +179,7 @@ export const EventMaster: Project = {
       text: `    We implemented this application when attending the FitchGroup Codeathon 2023, and this application was aiming to help the charity Friends of Bulgaria. 
     This application allowed users to see events update in the mobile phones once the database in WordPress is updated, and register and pay for the event. 
     After successful payment, both the user and the organizer will receive a confirmation email. We used React Native to ensure the application can run in both IOS and Android platforms. `,
-      imgLink: `${projectUrl}eventMaster/eventMaster-profileImg.jpg`
+      imgLink: `${projectUrl}eventMaster/eventMaster-profileimg.png`
     },
     {
       title: 'Day 1',
@@ -201,7 +201,7 @@ export const EventMaster: Project = {
       imgLink: `${projectUrl}eventMaster/eventMaster-demo.png`
     }
   ],
-  imgLink: `${projectUrl}eventMaster/eventMaster-profileImg.jpg`,
+  imgLink: `${projectUrl}eventMaster/eventMaster-profileimg.png`,
   pageLink: `${projectUrl}eventMaster`,
 }
 
