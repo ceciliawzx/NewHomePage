@@ -11,7 +11,7 @@ type state = {
 const initialState: state = {
   showMenu: false,
   changeWidth: false,
-  currPage: '/~zw4021/',
+  currPage: '.',
   showNotes: false,
   showPoems: false,
 };
