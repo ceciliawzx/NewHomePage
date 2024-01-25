@@ -10,8 +10,8 @@ export const interests: Interest[] = [
     My favourite composers are Debussy, Sibelius and Tchaikovsky. 
     I play in IC Sinfonietta and IC String Ensemble. 
     `,
-    imgLink: `${interestUrl}music-score.jpg`,
-    detailLink: `${interestUrl}classical-music`,
+    imgLink: `${interestUrl}/music-score.jpg`,
+    detailLink: `${interestUrl}/classical-music`,
     photos: [
       '../interests/classicalMusic/classicalMusic1.jpeg',
       '../interests/classicalMusic/classicalMusic2.webp',
@@ -25,8 +25,8 @@ export const interests: Interest[] = [
     description: `I've had many cats in my life, and I used to have 7 cats at the same time.
     I only have one now, her name is Chloe.
     I wish she could be happier and healthier than any other cats I had before. `,
-    imgLink: `${interestUrl}cat.jpg`,
-    detailLink: `${interestUrl}cats`,
+    imgLink: `${interestUrl}/cat.jpg`,
+    detailLink: `${interestUrl}/cats`,
     photos: [
       '../interests/cats/cat1.jpg',
       '../interests/cats/cat2.jpg',
@@ -68,8 +68,8 @@ export const interests: Interest[] = [
     description: `My favourite musical is Les Miserables. 
     I also love Phantom of the Opera, Hamilton, Cats, Elisabeth, 
     Rent, Mozart!, Mozart l'opéra rock, Le Rouge et le Noir and so on...`,
-    imgLink: `${interestUrl}musical.jpg`,
-    detailLink: `${interestUrl}musicals`,
+    imgLink: `${interestUrl}/musical.jpg`,
+    detailLink: `${interestUrl}/musicals`,
     photos: [
       '../interests/musicals/musical1.jpg',
       '../interests/musicals/musical2.jpg',
@@ -90,8 +90,8 @@ export const interests: Interest[] = [
     title: InterestType.Poems,
     intro: `『曾批给雨支风券，累上留云借月章。』`,
     description: `"Shall I compare thee to a summer's day?"`,
-    imgLink: `${interestUrl}poem.jpg`,
-    detailLink: `${interestUrl}poems`,
+    imgLink: `${interestUrl}/poem.jpg`,
+    detailLink: `${interestUrl}/poems`,
     photos: [
       '../interests/poem/poem1.jpeg',
       '../interests/poem/poem2.jpeg',
@@ -103,8 +103,8 @@ export const interests: Interest[] = [
     title: InterestType.Traveling,
     intro: `Read ten thousand books, travel ten thousand miles.`,
     description: `I love traveling.`,
-    imgLink: `${interestUrl}traveling.jpg`,
-    detailLink: `${interestUrl}traveling`,
+    imgLink: `${interestUrl}/traveling.jpg`,
+    detailLink: `${interestUrl}/traveling`,
     photos: [
       '../interests/traveling/traveling1.jpg',
       '../interests/traveling/traveling2.jpg',
@@ -132,8 +132,8 @@ export const interests: Interest[] = [
     title: InterestType.Food,
     intro: `Live for love and love for food.`,
     description: ``,
-    imgLink: `${interestUrl}food.jpg`,
-    detailLink: `${interestUrl}food`,
+    imgLink: `${interestUrl}/food.jpg`,
+    detailLink: `${interestUrl}/food`,
     photos: [
       '../interests/food/food1.jpg',
       '../interests/food/food2.jpg',

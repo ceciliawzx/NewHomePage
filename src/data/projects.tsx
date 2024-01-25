@@ -15,14 +15,14 @@ export const DRP: Project = {
     Our object was to find and solve a problem in the real-world. 
     The project mainly included making elevator pitch, iterating prototypes, implementing the real app, and a final presentation.
     It was a relatively short project, but we were able to learn the process of delivering a product from the very beginning, and also learned about the differences between school knowledge and designing for the real-world. `,
-      imgLink: `${projectUrl}drp/drp-intro.png`,
+      imgLink: `${projectUrl}/drp/drp-intro.png`,
     },
     {
       title: `Initial Research`,
       text: `    Food waste has always been a serious problem in the world. 
     We interviewed 32 young adults and found that 29 of them have the problem of wasting food. The reasons mentioned most frequently were that they bought too much food and that they forgot what they had in the fridge.
     Therefore, we wanted to design a fridge management app. This would help the users to track the expiration date of food in fridges and promote use before expiration date.`,
-      imgLink: `${projectUrl}drp/drp-current-journey.png`,
+      imgLink: `${projectUrl}/drp/drp-current-journey.png`,
     },
     {
       title: `Idea Change`,
@@ -46,24 +46,24 @@ export const DRP: Project = {
       text: `    We implemented an Android application that allowed users to log in items with expiration dates, and customize the notifications based on their needs.
     We learned and applied technologies like Human-centered design strategies, Kotlin, SQLite, Firebase to implement the app. 
     As we only had one month in total, we worked in smaller groups to ensure efficiency. `,
-      imgLink: `${projectUrl}drp/drp-implementation-basic.png`,
+      imgLink: `${projectUrl}/drp/drp-implementation-basic.png`,
     },
     {
       title: `Iterations`,
       text: `    Based on users feedback, we did several iterations on the app. For example, in order to simplify the process of logging items, we implemented a barcode scanner and connected it to an open source barcode database.
     We also implemented embedded chatting system that allowed users to share/request items, so users can engage in meaningful interactions, and improve the utilisation of resources.`,
-      imgLink: `${projectUrl}drp/drp-implementation-share.png`,
+      imgLink: `${projectUrl}/drp/drp-implementation-share.png`,
     },
     {
       title: `Impact Asset`,
       text: `    Imagine a world where we no longer have to worry about forgetting exiration dates of important items, and no more last-minute trip to the store. 
     Users can easily log in and manage their items, which allows them to stay organized, and can also save time and reduce frustration when they need to search for items. 
     Additionally, users can form a habit of planning shopping lists, consuming or restocking items before they expire, and making more responsible choices. This would optimize their consumption and encourage behaviours change. `,
-      imgLink: `${projectUrl}drp/drp.png`,
+      imgLink: `${projectUrl}/drp/drp.png`,
     },
   ],
-  imgLink: `${projectUrl}drp/drp.png`,
-  pageLink: `${projectUrl}drp`,
+  imgLink: `${projectUrl}/drp/drp.png`,
+  pageLink: `${projectUrl}/drp`,
 };
 
 export const WACC: Project = {
@@ -79,7 +79,7 @@ export const WACC: Project = {
     We wrote a compiler for a simple language from scratch using Scala. 
     In the front end we performed lexical analysis, syntactic analysis and semantic analysis to generate an AST and a symbol table, 
     In the back end we added a code generator by visiting the AST and generate assembly for ARM11 architecture.`,
-      imgLink: `${projectUrl}wacc/wacc.jpg`,
+      imgLink: `${projectUrl}/wacc/wacc.jpg`,
     },
     {
       title: `Syntax Analysis`,
@@ -116,11 +116,11 @@ export const WACC: Project = {
     (and we got the carrot mark every time)
     Overall, it was a very educational project. 
       `,
-      imgLink: `${projectUrl}wacc/wacc-file-structure.png`,
+      imgLink: `${projectUrl}/wacc/wacc-file-structure.png`,
     },
   ],
-  imgLink: `${projectUrl}wacc/wacc.jpg`,
-  pageLink: `${projectUrl}wacc`,
+  imgLink: `${projectUrl}/wacc/wacc.jpg`,
+  pageLink: `${projectUrl}/wacc`,
 };
 
 export const Pintos: Project = {
@@ -138,7 +138,7 @@ export const Pintos: Project = {
     Our objective was to strengthen these areas and add a virtual memory implementation. 
     We faced challenges like concurrency, memory leak and data structure design, but also learned a lot about C language and the overall operating system.
     (Due to the fact that it was the first big project in our uni lives, and it was so hard, everyone got a pintos glass as souvenirs.)`,
-      imgLink: `${projectUrl}pintos.jpg`,
+      imgLink: `${projectUrl}/pintos.jpg`,
     },
     {
       title: 'Task 0 - Alarm Clock',
@@ -164,8 +164,8 @@ export const Pintos: Project = {
     We split in smaller groups to work in parallel in order to ensure efficiency. `,
     },
   ],
-  imgLink: `${projectUrl}pintos.jpg`,
-  pageLink: `${projectUrl}pintos`,
+  imgLink: `${projectUrl}/pintos.jpg`,
+  pageLink: `${projectUrl}/pintos`,
 };
 
 export const EventMaster: Project = {
@@ -179,7 +179,7 @@ export const EventMaster: Project = {
       text: `    We implemented this application when attending the FitchGroup Codeathon 2023, and this application was aiming to help the charity Friends of Bulgaria. 
     This application allowed users to see events update in the mobile phones once the database in WordPress is updated, and register and pay for the event. 
     After successful payment, both the user and the organizer will receive a confirmation email. We used React Native to ensure the application can run in both IOS and Android platforms. `,
-      imgLink: `${projectUrl}eventMaster/eventMaster-profileimg.png`
+      imgLink: `${projectUrl}/eventMaster/eventMaster-profileimg.png`
     },
     {
       title: 'Day 1',
@@ -198,11 +198,11 @@ export const EventMaster: Project = {
       title: 'Conclusion',
       text: `    It was a great experience, not just because we won it (and everyone got an iPad), but also because but also because the codeathon was aiming to help the charity.
     And the fact that everyone had different experiences before made it possible for us to implement a complete application within two days, reinforcing my love for teamwork.`,
-      imgLink: `${projectUrl}eventMaster/eventMaster-demo.png`
+      imgLink: `${projectUrl}/eventMaster/eventMaster-demo.png`
     }
   ],
-  imgLink: `${projectUrl}eventMaster/eventMaster-profileimg.png`,
-  pageLink: `${projectUrl}eventMaster`,
+  imgLink: `${projectUrl}/eventMaster/eventMaster-profileimg.png`,
+  pageLink: `${projectUrl}/eventMaster`,
 }
 
 export const projects: Project[] = [EventMaster, DRP, WACC, Pintos];
