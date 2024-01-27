@@ -9,7 +9,7 @@ import { interests } from './data/interests';
 import { projects } from './data/projects';
 
 import AOS from 'aos';
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useAppContext } from './context/appContext';
 import 'aos/dist/aos.css';
 import './css/style.css';
