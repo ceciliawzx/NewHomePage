@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 100 100">
-  <!-- White Border -->
-  <text x="0" y="100" font-size="100" fill="white" stroke="white" stroke-width="6">&#9834;</text>
-  <!-- Note -->
-  <text x="0" y="100" font-size="100" fill="black">&#9834;</text>
-</svg>
