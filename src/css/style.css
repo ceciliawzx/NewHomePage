@@ -221,3 +221,10 @@
 #toggle-menu-arrow:hover {
   width: 100%;
 }
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Optional: Prevent horizontal scrolling */
+}
