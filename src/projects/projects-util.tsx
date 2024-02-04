@@ -30,7 +30,7 @@ export const ProjectInDetail = ({ project }: { project: Project }) => {
       style={{ backgroundColor: 'black', flexDirection: 'column' }}
     >
       <div className='back-button' onClick={handleGoBack}>
-        <img id='back-button-img' src={`${mainUrl}icon/back.png`} alt="Back" />
+        <img className='back-button-img' src={`${mainUrl}icon/back.png`} alt="Back" />
       </div>
       <div className='project-window'>
         <Title title={project.title} date={project.time} />

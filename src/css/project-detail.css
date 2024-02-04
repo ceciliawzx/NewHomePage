@@ -89,12 +89,12 @@
   font-size: 16px;
 }
 
-#back-button-img {
+.back-button-img {
   width: 75%;
   height: auto;
   transition: width 300ms ease-in-out;
 }
 
-#back-button-img:hover {
+.back-button-img:hover {
   width: 90%;
 }

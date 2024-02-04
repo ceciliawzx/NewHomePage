@@ -187,3 +187,26 @@
   position: relative;
   background-size: cover;
 }
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000; /* Ensure this is higher than any other element's z-index */
+
+}
+
+.back-button-img {
+  width: 75%;
+  height: auto;
+  transition: width 300ms ease-in-out;
+}
+
+.back-button-img:hover {
+  width: 90%;
+}
