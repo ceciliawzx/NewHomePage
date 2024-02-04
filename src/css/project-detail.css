@@ -77,3 +77,24 @@
   width: 40%;
   max-height: 500px;
 }
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#back-button-img {
+  width: 75%;
+  height: auto;
+  transition: width 300ms ease-in-out;
+}
+
+#back-button-img:hover {
+  width: 90%;
+}

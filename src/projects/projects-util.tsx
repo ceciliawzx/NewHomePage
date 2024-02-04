@@ -4,20 +4,34 @@ import '../css/project-detail.css';
 import { projectUrl } from '../data/data';
 import { Project, ProjectDetail } from '../util/types';
 import { useAppContext } from '../context/appContext';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
+import { mainUrl } from '../data/data';
+
 
 export const ProjectInDetail = ({ project }: { project: Project }) => {
   const {
     api: { setCurrPage },
   } = useAppContext();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     setCurrPage(projectUrl);
   }, []);
+
+  // Function to handle going back to the project page
+  const handleGoBack = () => {
+    navigate(projectUrl); // Replace with your project page URL
+  };
+
   return (
     <div
       className='window-main'
       style={{ backgroundColor: 'black', flexDirection: 'column' }}
     >
+      <div className='back-button' onClick={handleGoBack}>
+        <img id='back-button-img' src={`${mainUrl}icon/back.png`} alt="Back" />
+      </div>
       <div className='project-window'>
         <Title title={project.title} date={project.time} />
         <Content projectDetails={project.projectDetails} />
